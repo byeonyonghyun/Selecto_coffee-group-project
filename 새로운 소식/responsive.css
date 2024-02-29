@@ -1,0 +1,11 @@
+@media (max-width:500px) {
+    .whats_new_head > span {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:700px) {
+    .whats_new_head > span {
+        font-size: 50px;
+    }
+}
