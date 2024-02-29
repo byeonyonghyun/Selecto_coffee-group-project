@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "notosans";
+  src: url(./font/NotoSansKR/);
+}
+
+@font-face {
+  font-family: "SF";
+  src: url(./font/SFUIDisplay/);
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "notosans";
+  color: #ff4713;
+  letter-spacing: -2px;
+}
