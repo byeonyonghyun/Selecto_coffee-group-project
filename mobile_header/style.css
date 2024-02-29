@@ -1,0 +1,115 @@
+/*common*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR";
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /*body*/
+
+  body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
+    background: #000;
+
+  }
+.mobile_box {
+  position: absolute;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  z-index: 999999;
+  background: #fff;
+}
+.mobile_closeBtn {
+  background-image: url(https://www.selecto.co.kr/assets/images/icon/X@2x.png);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.mobile_menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  margin-top: 70px;
+  padding-bottom: 100px;
+}
+
+.menus {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: -1px;
+}
+
+.mobile_menu {
+
+  width: 100%;
+align-items: center;
+}
+.mobile_menu_title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+
+  color: #FF4713;
+}
+
+.menu_arrow {
+  background-image: url(https://www.selecto.co.kr/assets/images/icon/arrow-down.png);
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+}
+
+.mobile_menu_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.mobile_menu_list a {
+  font-size: 12px;
+    padding: 5px;
+    margin-bottom: 7px;
+    color: #FF4713;
+}
+
+.link {
+  width: 77%;
+  margin-top: 40px;
+}
+.link a:nth-child(2) {
+  margin: 0 5px;
+}
+.link button {
+  border-radius: 20px;
+  background: #FF4713;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-right: 135px;
+  margin-bottom: 60px;
+  border: none;
+}
