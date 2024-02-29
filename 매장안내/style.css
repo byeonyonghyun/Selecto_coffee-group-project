@@ -55,12 +55,102 @@
 }
 .store_search_left {
 	float: left;
-	height: 450px;
 	background: url(./img/c-location-map.png) center/cover no-repeat;
+}
+.store_search_left .locate_name {
+	border: 1px solid #f00;
+	margin: 0 auto;
+	width: 300px;
+	height: 100%;
+	position: relative;
+	transition: all 0.3s;
+}
+.store_search_left span {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background-color: #fff;
+	border-radius: 100%;
+	font-size: 9px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+	cursor: pointer;
+	position: absolute;
+}
+
+.인천 {
+	top: 60px;
+	left: 40px;
+}
+.서울 {
+	top: 73px;
+	left: 87px;
+}
+.경기도 {
+	top: 113px;
+	left: 110px;
+}
+.세종 {
+	top: 160px;
+	left: 119px;
+}
+.충청남도 {
+	top: 168px;
+	left: 73px;
+}
+.대전 {
+	top: 206px;
+	left: 126px;
+}
+.전라북도 {
+	top: 238px;
+	left: 90px;
+}
+.광주 {
+	top: 290px;
+	left: 111px;
+}
+.전라남도 {
+	top: 306px;
+	left: 58px;
+}
+.강원도 {
+	top: 70px;
+	right: 73px;
+}
+.충청북도 {
+	top: 146px;
+	right: 87px;
+}
+.경상북도 {
+	top: 175px;
+	right: 34px;
+}
+.대구 {
+	top: 225px;
+	right: 60px;
+}
+.울산 {
+	top: 245px;
+	right: 10px;
+}
+.경상남도 {
+	bottom: 140px;
+	right: 90px;
+}
+.부산 {
+	bottom: 100px;
+	right: 20px;
+}
+.제주도 {
+	bottom: 20px;
+	left: 23px;
 }
 .store_search_right {
 	float: right;
-	height: 450px;
 	padding: 50px 8%;
 }
 .store_search_right_inner {
