@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/6fa801e571.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap">
+
+    <!-- title -->
+    <section id="title">
+      <div class="title_inner">
+        <h1>매장안내</h1>
+        <div>
+          <h4>매장찾기</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="store_wrap">
+      <!-- 매장찾기 -->
+      <div id="매장찾기" class="store_search">
+        <div class="store_search_inner">
+          <div class="store_search_left">
+            <div class="locate_name">
+              <span class="인천">인천</span>
+              <span class="서울">서울</span>
+              <span class="경기도">경기도</span>
+              <span class="강원도">강원도</span>
+              <span class="충청북도">충청북도</span>
+              <span class="충청남도">충청남도</span>
+              <span class="세종">세종</span>
+              <span class="전라북도">전라북도</span>
+              <span class="전라남도">전라남도</span>
+              <span class="대전">대전</span>
+              <span class="경상북도">경상북도</span>
+              <span class="경상남도">경상남도</span>
+              <span class="대구">대구</span>
+              <span class="광주">광주</span>
+              <span class="부산">부산</span>
+              <span class="울산">울산</span>
+              <span class="제주도">제주도</span>
+            </div>
+          </div>
+          <div class="store_search_right">
+            <div class="store_search_right_inner">
+              <div class="store_search_locate">
+                <h3>01 지역/매장별 검색</h3>
+                <div class="store_search_locate_city">
+                  <p>지역검색</p>
+                  <div>
+                    <select name="city" id="city">
+                      <option value="도/시 선택">도/시 선택</option>
+                    </select>
+                    <select name="state" id="state">
+                      <option value="구/군 선택">구/군 선택</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="store_search_locate_name">
+                  <p>매장명</p>
+                  <form action="https:localhost:3000/search.js" method="post">
+                    <input type="text" id="store_name">
+                    <input type="submit" name="" id="store_submit" value="">
+                  </form>
+                </div>
+              </div>
+              <div class="store_search_service">
+                <h3>02 매장 서비스별 검색</h3>
+                <div class="store_search_service_inner">
+                  <div>
+                    <span>
+                      <input type="checkbox" name="" id="wifi">
+                      <label for="wifi"></label>
+                      <label for="wifi">
+                        <img src="./img/와이파이 이용가능.svg" alt="">
+                        무선인터넷 가능
+                      </label>
+                    </span>
+                    <span>
+                      <input type="checkbox" name="" id="smoke">
+                      <label for="smoke"></label>
+                      <label for="smoke">
+                        <img src="./img/흡연 가능.svg" alt="">
+                        흡연시설 보유
+                      </label>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <input type="checkbox" name="" id="park">
+                      <label for="park"></label>
+                      <label for="park">
+                        <img src="./img/주차 가능.svg" alt="">
+                        주차가능
+                      </label>
+                    </span>
+                    <span>
+                      <input type="checkbox" name="" id="parasol">
+                      <label for="parasol"></label>
+                      <label for="parasol">
+                        <img src="./img/야외테라스 가능.svg" alt="">
+                        야외테라스 보유
+                      </label>
+                    </span>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="" id="mobile">
+                    <label for="mobile"></label>
+                    <label for="mobile">
+                      <img src="./img/모바일 가맹점.svg" alt="">
+                      모바일 가맹점
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="매장안내" class="store_info">
+        <h2>매장 안내</h2>
+        <table>
+          <thead>
+            <tr>
+              <th class="store_nm">매장명</th>
+              <th class="store_loc">지역</th>
+              <th class="store_adr">매장주소</th>
+              <th class="store_tel">매장전화번호</th>
+              <th class="store_srv">서비스</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="store_nm">평택서재자이점</td>
+              <td class="store_loc">경기</td>
+              <td class="store_adr">경기 평택시 동삭동 715-1 1층</td>
+              <td class="store_tel">031-625-1777</td>
+              <td class="store_srv">
+                <img src="./img/와이파이 이용가능.svg" alt="">
+                <img src="./img/야외테라스 가능.svg" alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="store_nm">청라국제도시점</td>
+              <td class="store_loc">인천</td>
+              <td class="store_adr">인천 서구 청라한내로 110 (청라동) 1층</td>
+              <td class="store_tel">070-8657-3336</td>
+              <td class="store_srv">
+                <img src="./img/와이파이 이용가능.svg" alt="">
+                <img src="./img/흡연 가능.svg" alt="">
+                <img src="./img/주차 가능.svg" alt="">
+                <img src="./img/야외테라스 가능.svg" alt="">
+                <img src="./img/모바일 가맹점.svg" alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="store_nm">영월점</td>
+              <td class="store_loc">강원</td>
+              <td class="store_adr">강원특별자치도 영월군 영월읍 청령포로 111 (방절리) 1층, 셀렉토 커피 영월점</td>
+              <td class="store_tel">033-373-5557</td>
+              <td class="store_srv">
+                <img src="./img/와이파이 이용가능.svg" alt="">
+                <img src="./img/주차 가능.svg" alt="">
+                <img src="./img/야외테라스 가능.svg" alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="store_nm">창동역점</td>
+              <td class="store_loc">서울</td>
+              <td class="store_adr">서울 도봉구 마들로11가길 16 (창동, KING프라자) 1층</td>
+              <td class="store_tel">029940313</td>
+              <td class="store_srv">
+                <img src="./img/와이파이 이용가능.svg" alt="">
+                <img src="./img/야외테라스 가능.svg" alt="">
+              </td>
+            </tr>
+            <tr>
+              <td class="store_nm">삼성전자 화성캠퍼스점</td>
+              <td class="store_loc">경기</td>
+              <td class="store_adr">경기 화성시 삼성전자로 1 (반월동) 셀렉토커피 삼성전자 화성캠퍼스점</td>
+              <td class="store_tel"></td>
+              <td class="store_srv"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="page_number">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <span><img src="./img/c-page-next-ic.svg" alt=""></span>
+        <a href="#">44</a>
+      </div>
+    </section>
+</body>
+
+</html>
