@@ -1,0 +1,127 @@
+@import url(./reset.css);
+#wrap, .container {
+    position: relative;
+}
+.whats_new_wrap > .inner {
+    padding-top: 180px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner > span {
+    width: 80%;
+    font-weight: bold;
+    font-size: 65px;
+    
+}
+.whats_new_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 23px;
+}
+.whats_new_active {
+    border-top: 1px solid;
+    margin-right: 20px;
+}
+.whats_new {
+    opacity: 0.5;
+    border-top: 1px solid;
+}
+.ing_wrap {
+    width: 1250px;
+}
+.new_head {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.whats_news_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+}
+.whats_new_liimg {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 80px;
+    transition: 0.3s ease;
+}
+.whats_new_img img {
+    transition: all 1s ;
+}
+.whats_new_img img:hover {
+    transform: scale(1.4);
+}
+.whats_new_img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.whats_new_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.whats_re_img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.whats_re_img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.whats_new_info {
+    width: 100%;
+    margin-top: 15px;
+    line-height: 1;
+}
+.whats_new_info > span:first-child {
+    font-size: 15px;
+    font-weight: 500;
+    /* color: #ff4713; */
+    display: inline-block;
+    margin-bottom: 6px;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.whats_new_info > span:last-child {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ff4713;
+}
+.end_wrap {
+  width: 1300px;
+    display: flex;
+    margin-top: 120px;
+}
+.end_mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px !important;
+    height: 90px !important;
+    z-index: 9;
+}
+.img_bkout {
+    filter: brightness(50%);
+}
