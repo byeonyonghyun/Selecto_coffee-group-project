@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'notosans';
+  src: url(./font/NotoSansKR/NotoSansKR-Regular.ttf);
+}
+
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'notosans';
+  color: #ff4713;
+  letter-spacing: -0.5px;
+  background:#F7F6F3;;
+}

@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "notosans";
-	src: url(./font/Noto\ Sans\ KR);
+	src: url(./font/NotoSansKR/NotoSansKR-Regular.ttf);
 }
 /* reset */
 * {
@@ -16,6 +16,7 @@ a {
 }
 body {
 	font-family: "notosans";
+	font-size: 10px;
 	color: #ff4713;
-	letter-spacing: -2px;
+	letter-spacing: -0.5px;
 }

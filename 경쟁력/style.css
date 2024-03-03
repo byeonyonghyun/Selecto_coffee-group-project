@@ -1,0 +1,53 @@
+@import url(./reset.css);
+
+#container{
+    border: 1px solid #f00;
+    width: 1720px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+#container_inner{
+    width: 1360px;
+    margin: 0 auto;
+}
+
+/* title */
+.title{
+    margin-bottom: 45px;
+}
+.title h1 {
+    font-size: 65px;
+}
+
+/* youtube */
+.youtube{
+    width: 100%;
+    height: 800px;
+}
+.youtube_inner{
+    width: 100%;
+    height: 100%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* content */
+.content{
+    padding-top: 260px;
+}
+.content_inner_detail h2 {
+    padding-top: 81px;
+    font-size: 48px;
+    font-weight: bold;
+
+}
+.content_inner_detail p {
+    padding-top: 55px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.content:last-child{
+    padding-bottom: 217px;
+}
