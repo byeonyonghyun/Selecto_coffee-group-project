@@ -1,7 +1,3 @@
-@media screen and (max-width:1920px){
-
-	
-}
 @media screen and (min-width: 1221px) {
 	.store_search {
 		min-width: 1200px;
@@ -101,7 +97,7 @@
 	.title_inner .h1 {
 		font-size: 38px;
 	}
-	.store_search_inner{
+	.store_search_inner {
 		padding: 0 5%;
 	}
 	.store_search_left {
