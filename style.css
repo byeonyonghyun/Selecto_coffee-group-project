@@ -22,10 +22,13 @@
   max-height: 100vh;
   overflow: hidden;
 }
-.scroll_img img {
+.main-img-pc {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.main-img-mo {
+  display: none;
 }
 .popup_all {
   position: absolute;
@@ -699,4 +702,20 @@ button.active {
   }
 }
 @media screen and (max-width: 500px) {
+  .main-img-mo {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  .popup_all {
+    display: none;
+  }
+  .mobile-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
 }
