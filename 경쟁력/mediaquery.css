@@ -1,6 +1,7 @@
 @media screen and (min-width: 1721px) {
 	#container {
 		width: 1720px;
+		padding-top: 180px;
 	}
 	#container_inner {
 		width: 1360px;
@@ -22,6 +23,9 @@
 	}
 }
 @media screen and (max-width: 1720px) {
+	#container {
+		padding-top: 180px;
+	}
 	#container_inner {
 		width: 1360px;
 	}
@@ -48,6 +52,9 @@
 	}
 }
 @media screen and (max-width: 1024px) {
+	#container {
+		padding-top: 160px;
+	}
 	#container_inner {
 		text-align: center;
 	}
@@ -55,7 +62,7 @@
 		font-size: 43px;
 	}
 	.content_inner_detail h2 {
-		font-size: 40px;
+		font-size: 48px;
 	}
 	.content_inner_detail p {
 		font-size: 18px;

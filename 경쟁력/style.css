@@ -3,7 +3,6 @@
 
 #container {
 	margin: 0 auto;
-	padding-top: 120px;
 }
 #container_inner {
 	margin: 0 auto;
@@ -56,4 +55,15 @@ iframe {
 }
 .content:last-child {
 	padding-bottom: 217px;
+}
+
+/* fade in */
+.fade-in {
+	opacity: 0;
+	transform: translateY(-5%);
+	transition: all 2s;
+}
+.fade-in.active {
+	transform: translateY(0%);
+	opacity: 1;
 }
