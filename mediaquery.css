@@ -1,65 +1,165 @@
-@media screen and (max-width: 1600px) {
-  /* main image page */
+@media screen and (max-width: 1024px) {
+  .popup_all {
+    flex-direction: column;
+  }
   .popup {
-    width: 188px;
-    height: 100%;
-    margin-right: 40px;
-  }
-  .pop_img {
-    width: 188px;
-    height: 188px;
-  }
-  .pop_img img {
-    width: 100%;
-    height: 100%;
-  }
-  /* select-coffee */
-  #select-coffee {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-  }
-  /* left */
-  .select-button h1 {
-    font: 700 60px/1 "SF700";
-    margin-bottom: 40px;
-  }
-  .buttons {
+    width: 150px;
+    margin-bottom: 35px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
   }
-  .buttons button {
-    font: 400 24px/1 "SF400";
-    border: none;
-    color: #fff;
-    background: none;
-    margin-bottom: 30px;
-    cursor: pointer;
+  .pop_img {
+    width: 150px;
+    height: 150px;
   }
-  button.active {
-    display: block;
-    padding-bottom: 2px;
-    border-bottom: 3px solid #fff;
-    font-weight: 700;
+  .pop_close {
+    display: none;
   }
-  /* center */
-  .select-signature-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 440px;
-    height: 100%;
-    margin: 50px 0;
-  }
-  .select-signature-img img {
+  /* news */
+  .new_wrap {
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .news_title {
+    width: 100%;
+    height: 100%;
+    padding: 50px 40px;
+  }
+  .news_title > h1 {
+    position: unset;
+    transform: translate(0);
+    text-align: left;
+  }
+  .mobile_arr {
+    display: block;
+    width: 10%;
+  }
+  .arr_ani {
+    display: none;
+  }
+  .event_contents {
+    width: 100%;
+    height: 100%;
+  }
+  .news_content {
+    padding: 40px;
+    border-left: none;
+    border-right: none;
+  }
+  .content_titie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 85%;
+  }
+  .content_img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main_img_pc {
+    display: none;
+  }
+  .main_img_mo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .popup_all {
+    display: none;
+  }
+  .mobile_popup {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .m_inner_popup {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .m_inner_popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .m_pop_contents {
+    width: 100%;
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+  }
+  .m_popup_close {
+    width: 12px;
+    height: 12px;
+    background: url(./img/s_img/m-popup-close.png) center / cover no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: inline-block;
+    border: none;
+  }
+  .m_pop_contents a {
+    width: 100%;
+    height: 100%;
+  }
+  .m_pop_contents a img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .m_pop_contents span {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 56px;
+    height: 25px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 11px;
+    line-height: 25px;
+    text-align: center;
+    color: #222221;
+    padding: 0 5px;
+  }
+  .m_pop_contents span p {
+    display: inline-block;
+    color: #ff4713;
+    padding: 0 5px;
+  }
+  .m_pop_contents span p:nth-child(2) {
+    color: #222221;
+  }
+  .m_pop_close {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    font-size: 12px;
+    color: #333;
+  }
+  .mouse_icon {
+    display: none;
+  }
+  .mouse_scroll {
+    display: none;
+  }
+  .mouse_bar {
+    display: none;
   }
 }
