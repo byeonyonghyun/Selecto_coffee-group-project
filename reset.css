@@ -1,12 +1,18 @@
-@font-face {
+/* @font-face {
   font-family: "notosans";
   src: url(./font/NotoSansKR/NotoSansKR-Regular.ttf);
 }
 
 @font-face {
-  font-family: "SF";
-  src: url(./font/SFUIDisplay/);
+  font-family: "SF400";
+  src: url(./font/SFUIDisplay/Display-normal-400-100.ttf);
 }
+@font-face {
+  font-family: "SF700";
+  src: url(./font/SFUIDisplay/Display-normal-700-100.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 /* reset */
 * {
   margin: 0;
@@ -20,7 +26,7 @@ a {
   text-decoration: none;
 }
 body {
-  font-family: "notosans";
+  font: 500 10px/1 "Noto Sans KR", sans-serif;
   color: #ff4713;
   letter-spacing: -2px;
 }
