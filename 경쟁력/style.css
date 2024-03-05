@@ -10,6 +10,7 @@
 
 /* title */
 .title {
+	transform: translateY(-5%);
 	margin-bottom: 45px;
 }
 
@@ -36,6 +37,7 @@ iframe {
 	width: 100%;
 }
 .content_inner_img {
+	transform: translateY(-5%);
 	height: 75%;
 }
 .content_inner_img img {
@@ -50,6 +52,7 @@ iframe {
 	font-weight: bold;
 }
 .content_inner_detail p {
+	transform: translateY(10%);
 	padding-top: 4%;
 	font-weight: 400;
 }
@@ -60,7 +63,6 @@ iframe {
 /* fade in */
 .fade-in {
 	opacity: 0;
-	transform: translateY(-5%);
 	transition: all 2s;
 }
 .fade-in.active {
