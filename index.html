@@ -14,32 +14,36 @@
     <div id="wrap">
       <article id="main_page">
         <div class="scroll_img">
-          <img
+          <!-- <img
             class="main_img_pc"
             src="./img/s_img/main-desk-01.jpg"
             alt="main01"
-          />
+          /> -->
           <img
             class="main_img_mo"
             src="./img/s_img/small-main.jpg"
             alt="main-m01"
           />
+          <div class="arrows">
+            <span id="left" class="arrow"></span>
+            <span id="right" class="arrow"></span>
+          </div>
         </div>
         <div class="popup_all">
-          <section class="popup">
-            <a class="pop_img" href="#">
+          <section class="popup pop01">
+            <a class="pop_img pop_link01" href="#">
               <img src="./img/s_img/pop-main1.png" alt="popup01" />
             </a>
-            <div class="pop_close">
+            <div class="pop_close popclose01">
               <p>오늘 하루 창 열지 않기</p>
               <p>닫기</p>
             </div>
           </section>
-          <section class="popup">
-            <a class="pop_img" href="#">
+          <section class="popup pop02">
+            <a class="pop_img pop_link02" href="#">
               <img src="./img/s_img/pop-main2.png" alt="popup02" />
             </a>
-            <div class="pop_close">
+            <div class="pop_close popclose02">
               <p>오늘 하루 창 열지 않기</p>
               <p>닫기</p>
             </div>
@@ -80,70 +84,191 @@
       </article>
       <article id="select_coffee">
         <section class="select_button_page">
+          <div class="left_img">
+            <img
+              src="./img/s_img/main-select-bg-1.jpg"
+              alt="bg01"
+              data-index="0"
+            />
+            <img
+              src="./img/s_img/main-select-bg-2.jpg"
+              alt="bg02"
+              data-index="1"
+            />
+            <img
+              src="./img/s_img/main-select-bg-3.jpg"
+              alt="bg03"
+              data-index="2"
+            />
+            <img
+              src="./img/s_img/main-select-bg-4.jpg"
+              alt="bg04"
+              data-index="3"
+            />
+          </div>
           <div class="select_button">
             <h1>SELECTO MENU</h1>
             <div class="buttons">
-              <button class="active">SIGNATURE</button>
-              <button>BEVERAGE</button>
-              <button>COFFEE</button>
-              <button>COOKIE</button>
+              <button class="active" id="SIGNATURE" data-index="0">
+                SIGNATURE
+              </button>
+              <button id="BEVERAGE" data-index="1">BEVERAGE</button>
+              <button id="COFFEE" data-index="2">COFFEE</button>
+              <button id="COOKIE" data-index="3">COOKIE</button>
             </div>
           </div>
         </section>
         <section class="select_signature_img">
-          <img src="./img/s_img/c-signature-item-00.png" alt="item00" />
+          <img
+            class="active"
+            src="./img/s_img/main-select-item-1-1.png"
+            alt="item00"
+            data-index="0"
+          />
+          <img
+            src="./img/s_img/main-select-item-2-1.png"
+            alt="item00"
+            data-index="1"
+          />
+          <img
+            src="./img/s_img/main-select-item-3-1.png"
+            alt="item00"
+            data-index="2"
+          />
+          <img
+            src="./img/s_img/main-select-item-4-1.png"
+            alt="item00"
+            data-index="3"
+          />
         </section>
         <section class="select_menu">
           <article class="select_menu_detail">
             <div class="menu_text">
-              <h1>SIGNATURE</h1>
-              <p>
+              <h1 class="active" data-index="0">SIGNATURE</h1>
+              <h1 data-index="1">BEVERAGE</h1>
+              <h1 data-index="2">COFFEE</h1>
+              <h1 data-index="3">COOKIE</h1>
+              <p class="active" data-index="0">
                 셀렉토 감성과 재미를 듬뿍 담아 낸, 셀렉토에서<br />맛볼 수 있는
                 시그니처 음료
               </p>
+              <p data-index="1">
+                고객의 라이프 스타일에 맞춰 더욱 다양하게 즐길<br />수 있는
+                셀렉토의 음료 라인업!
+              </p>
+              <p data-index="2">
+                셀렉토는 품질 좋은 원두를 선별해, 최적의 로스팅 포인트로<br />
+                더욱 섬세하게 균형잡힌 충미의 커피를 고객에게 선사합니다.
+              </p>
+              <p data-index="3">
+                남녀노소, 어디서나 맛있게! 셀렉토 시그니처 수제 쿠키
+              </p>
+            </div>
+            <div class="menu_img active">
+              <div>
+                <img src="./img/s_img/main-select-item-1-2.png" alt="item01" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-1-3.png" alt="item02" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-1-4.png" />
+              </div>
             </div>
             <div class="menu_img">
               <div>
-                <img src="./img/s_img/c-signature-item-01.png" alt="item01" />
+                <img src="./img/s_img/main-select-item-2-2.png" alt="item01" />
               </div>
               <div>
-                <img src="./img/s_img/c-signature-item-02-1.png" alt="item02" />
+                <img src="./img/s_img/main-select-item-2-3.png" alt="item02" />
               </div>
               <div>
-                <img src="./img/s_img/c-signature-item-03-1.png" alt="item03" />
+                <img src="./img/s_img/main-select-item-2-4.png" />
+              </div>
+            </div>
+            <div class="menu_img">
+              <div>
+                <img src="./img/s_img/main-select-item-3-2.png" alt="item01" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-3-3.png" alt="item02" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-3-4.png" />
+              </div>
+            </div>
+            <div class="menu_img">
+              <div>
+                <img src="./img/s_img/main-select-item-4-2.png" alt="item01" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-4-3.png" alt="item02" />
+              </div>
+              <div>
+                <img src="./img/s_img/main-select-item-4-4.png" />
               </div>
             </div>
             <div class="menu_topping">
               <div class="topping_title">
                 <h1>추천 토핑류</h1>
               </div>
-              <div class="topping_wrap">
+              <div class="topping_wrap active" data-index="0">
                 <div class="topping_detail">
-                  <img
-                    src="./img/s_img/topping-detail-01.png"
-                    alt="topping01"
-                  />
+                  <img src="./img/s_img/topping-detail-1.png" alt="topping01" />
                   <p>시럽_바닐라빈</p>
                 </div>
                 <div class="topping_detail">
-                  <img
-                    src="./img/s_img/topping-detail-02.png"
-                    alt="topping02"
-                  />
+                  <img src="./img/s_img/topping-detail-2.png" alt="topping02" />
                   <p>시럽_카라멜</p>
                 </div>
                 <div class="topping_detail">
-                  <img
-                    src="./img/s_img/topping-detail-03.png"
-                    alt="topping03"
-                  />
+                  <img src="./img/s_img/topping-detail-3.png" alt="topping03" />
                   <p>우유_오트밀</p>
                 </div>
                 <div class="topping_detail">
-                  <img
-                    src="./img/s_img/topping-detail-04.png"
-                    alt="topping01"
-                  />
+                  <img src="./img/s_img/topping-detail-4.png" alt="topping01" />
+                  <p>크림_흑임자</p>
+                </div>
+              </div>
+              <div class="topping_wrap" data-index="1">
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-2.png" alt="topping02" />
+                  <p>시럽_카라멜</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-3.png" alt="topping03" />
+                  <p>우유_오트밀</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-4.png" alt="topping01" />
+                  <p>크림_흑임자</p>
+                </div>
+              </div>
+              <div class="topping_wrap" data-index="2">
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-3.png" alt="topping03" />
+                  <p>우유_오트밀</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-4.png" alt="topping01" />
+                  <p>크림_흑임자</p>
+                </div>
+              </div>
+              <div class="topping_wrap" data-index="3">
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-1.png" alt="topping01" />
+                  <p>시럽_바닐라빈</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-2.png" alt="topping02" />
+                  <p>시럽_카라멜</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-3.png" alt="topping03" />
+                  <p>우유_오트밀</p>
+                </div>
+                <div class="topping_detail">
+                  <img src="./img/s_img/topping-detail-4.png" alt="topping01" />
                   <p>크림_흑임자</p>
                 </div>
               </div>
@@ -251,9 +376,9 @@
           <p>selecto_coffee</p>
         </div>
         <div class="sns_imgs">
-          <img src="./img/s_img/sns-img01.jpg" alt="sns01" />
-          <img src="./img/s_img/sns-img02.jpg" alt="sns02" />
-          <img src="./img/s_img/sns-img03.jpg" alt="sns03" />
+          <img class="sns_link01" src="./img/s_img/sns-img01.jpg" alt="sns01" />
+          <img class="sns_link02" src="./img/s_img/sns-img02.jpg" alt="sns02" />
+          <img class="sns_link03" src="./img/s_img/sns-img03.jpg" alt="sns03" />
         </div>
       </article>
     </div>
