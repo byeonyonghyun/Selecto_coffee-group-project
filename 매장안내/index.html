@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/6fa801e571.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./style.css">
-  <script src="./script.js"></script>
+  <script defer type="module" src="./script.js"></script>
 
   <title>Document</title>
 </head>
@@ -31,35 +31,35 @@
       <div id="매장찾기" class="store_search">
         <div class="store_search_inner">
           <div class="store_search_left">
-              <div class="locate_name_area">
-                <span class="locate_name incheon" id="인천">인천</span>
-                <span class="locate_name seoul" id="서울">서울</span>
-                <span class="locate_name 
+            <div class="locate_name_area">
+              <span class="locate_name incheon" id="인천">인천</span>
+              <span class="locate_name seoul" id="서울">서울</span>
+              <span class="locate_name 
                 gyeonggi-do" id="경기">경기도</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 Gangwon-do" id="강원">강원도</span>
-                <span class="locate_name Chungbuk" id="충북">충청북도</span>
-                <span class="locate_name Chungnam" id="충남">충청남도</span>
-                <span class="locate_name 
+              <span class="locate_name Chungbuk" id="충북">충청북도</span>
+              <span class="locate_name Chungnam" id="충남">충청남도</span>
+              <span class="locate_name 
                 Sejong" id="세종">세종</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 jeonbuk" id="전북">전라북도</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 Jeonnam" id="전남">전라남도</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 Daejeon" id="대전">대전</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 Gyeongbuk" id="경북">경상북도</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 Gyeongnam" id="경남">경상남도</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 daegu" id="대구">대구</span>
-                <span class="locate_name 
+              <span class="locate_name 
                 gwangju" id="광주">광주</span>
-                <span class="locate_name busan" id="부산">부산</span>
-                <span class="locate_name Ulsan" id="울산">울산</span>
-                <span class="locate_name Jeju" id="제주">제주도</span>
-              </div>
+              <span class="locate_name busan" id="부산">부산</span>
+              <span class="locate_name Ulsan" id="울산">울산</span>
+              <span class="locate_name Jeju" id="제주">제주도</span>
+            </div>
           </div>
           <div class="store_search_right">
             <div class="store_search_right_inner">
@@ -70,6 +70,23 @@
                   <div>
                     <select name="city" id="city">
                       <option value="도/시 선택">도/시 선택</option>
+                      <option value="강원">강원</option>
+                      <option value="경기">경기</option>
+                      <option value="경남">경남</option>
+                      <option value="경북">경북</option>
+                      <option value="광주">광주</option>
+                      <option value="대구">대구</option>
+                      <option value="대전">대전</option>
+                      <option value="부산">부산</option>
+                      <option value="서울">서울</option>
+                      <option value="세종">세종</option>
+                      <option value="울산">울산</option>
+                      <option value="인천">인천</option>
+                      <option value="전남">전남</option>
+                      <option value="전북">전북</option>
+                      <option value="제주">제주</option>
+                      <option value="충남">충남</option>
+                      <option value="충북">충북</option>
                     </select>
                     <select name="state" id="state">
                       <option value="구/군 선택">구/군 선택</option>
@@ -150,57 +167,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="store_nm">평택서재자이점</td>
-              <td class="store_loc">경기</td>
-              <td class="store_adr">경기 평택시 동삭동 715-1 1층</td>
-              <td class="store_tel">031-625-1777</td>
-              <td class="store_srv">
-                <img src="./img/와이파이 이용가능.svg" alt="">
-                <img src="./img/야외테라스 가능.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="store_nm">청라국제도시점</td>
-              <td class="store_loc">인천</td>
-              <td class="store_adr">인천 서구 청라한내로 110 (청라동) 1층</td>
-              <td class="store_tel">070-8657-3336</td>
-              <td class="store_srv">
-                <img src="./img/와이파이 이용가능.svg" alt="">
-                <img src="./img/흡연 가능.svg" alt="">
-                <img src="./img/주차 가능.svg" alt="">
-                <img src="./img/야외테라스 가능.svg" alt="">
-                <img src="./img/모바일 가맹점.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="store_nm">영월점</td>
-              <td class="store_loc">강원</td>
-              <td class="store_adr">강원특별자치도 영월군 영월읍 청령포로 111 (방절리) 1층, 셀렉토 커피 영월점</td>
-              <td class="store_tel">033-373-5557</td>
-              <td class="store_srv">
-                <img src="./img/와이파이 이용가능.svg" alt="">
-                <img src="./img/주차 가능.svg" alt="">
-                <img src="./img/야외테라스 가능.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="store_nm">창동역점</td>
-              <td class="store_loc">서울</td>
-              <td class="store_adr">서울 도봉구 마들로11가길 16 (창동, KING프라자) 1층</td>
-              <td class="store_tel">029940313</td>
-              <td class="store_srv">
-                <img src="./img/와이파이 이용가능.svg" alt="">
-                <img src="./img/야외테라스 가능.svg" alt="">
-              </td>
-            </tr>
-            <tr>
-              <td class="store_nm">삼성전자 화성캠퍼스점</td>
-              <td class="store_loc">경기</td>
-              <td class="store_adr">경기 화성시 삼성전자로 1 (반월동) 셀렉토커피 삼성전자 화성캠퍼스점</td>
-              <td class="store_tel"></td>
-              <td class="store_srv"></td>
-            </tr>
           </tbody>
         </table>
       </div>

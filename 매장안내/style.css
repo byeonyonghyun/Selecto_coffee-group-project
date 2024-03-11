@@ -79,35 +79,39 @@
 	cursor: pointer;
 	position: absolute;
 }
-.incheon{
+.store_search_left span.active {
+	background-color: #ff4713;
+	color: #fff;
+}
+.incheon {
 	top: 59px;
 	left: 40px;
 }
-.seoul{
+.seoul {
 	top: 75px;
 	left: 85px;
 }
-.gyeonggi-do{
+.gyeonggi-do {
 	top: 116px;
 	left: 112px;
 }
-.Sejong{
+.Sejong {
 	top: 160px;
 	left: 120px;
 }
-.Chungnam{
+.Chungnam {
 	top: 170px;
 	left: 75px;
 }
-.Chungbuk{
+.Chungbuk {
 	top: 144px;
 	left: 164px;
 }
-.Daejeon{
+.Daejeon {
 	top: 206px;
 	left: 134px;
 }
-.jeonbuk{
+.jeonbuk {
 	top: 238px;
 	left: 91px;
 }
@@ -115,35 +119,35 @@
 	top: 306px;
 	left: 60px;
 }
-.Gangwon-do{
+.Gangwon-do {
 	top: 70px;
 	left: 182px;
 }
-.Gyeongbuk{
+.Gyeongbuk {
 	top: 174px;
 	left: 220px;
 }
-.daegu{
+.daegu {
 	top: 226px;
 	left: 197px;
 }
-.Gyeongnam{
+.Gyeongnam {
 	top: 264px;
 	left: 167px;
 }
-.Ulsan{
+.Ulsan {
 	top: 246px;
 	left: 248px;
 }
-.busan{
+.busan {
 	top: 293px;
 	left: 222px;
 }
-.gwangju{
+.gwangju {
 	top: 298px;
 	left: 116px;
 }
-.Jeju{
+.Jeju {
 	top: 384px;
 	left: 30px;
 }
