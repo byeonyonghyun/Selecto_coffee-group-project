@@ -1,12 +1,3 @@
-// m-popup close
-const popupBtn = document.querySelector(".m_popup_close");
-const mPopup = document.querySelectorAll(".mobile_popup");
-console.log(mPopup);
-
-popupBtn.addEventListener("click", () => {
-  popupBtn.parentNode.parentNode.remove();
-});
-
 // popup close
 const popClose01 = document.querySelector(".popclose01");
 const popClose02 = document.querySelector(".popclose02");
@@ -18,6 +9,18 @@ popClose01.addEventListener("click", () => {
 });
 popClose02.addEventListener("click", () => {
   popClose02.parentNode.remove();
+});
+
+// m-popup close
+const body = document.querySelector("body");
+const popupBtn = document.querySelector(".m_popup_close");
+const mPopup = document.querySelectorAll(".mobile_popup");
+
+body.classList.add("modal-open");
+
+popupBtn.addEventListener("click", () => {
+  popupBtn.parentNode.parentNode.parentNode.remove();
+  body.classList.remove("modal-open");
 });
 
 // popup link
@@ -32,59 +35,74 @@ popLink02.addEventListener("click", () => {
 });
 
 // image slide
-const imgs = [
-  "main-desk-1.jpg",
-  "main-desk-2.jpg",
-  "main-desk-3.jpg",
-  "main-desk-4.jpg",
-];
+const sliderWrapper = document.querySelector(".scroll_img");
+const sliderContainer = document.querySelector(".slide_pc");
+const sliderContainerMo = document.querySelector(".slide_mo");
+const slides = document.querySelectorAll(".slide_pc > img");
+const slidesMo = document.querySelectorAll(".slide_mo > img");
+console.log(slides);
 
-const imgContainer = document.querySelector(".scroll_img");
-const arrows = document.querySelectorAll(".arrows");
-const img = document.createElement("img");
-const src = document.createAttribute("src");
+const navPrev = document.querySelector("#left");
+const navNext = document.querySelector("#right");
 
-img.className = "main_img_pc";
-src.value = `./img/s_img/${imgs[0]}`;
+const slideCount = slides.length;
+// slide count
+for (let i = 0; i < slideCount; i++) {
+  slides[i].style.left = `${i * 100}%`;
+  slidesMo[i].style.left = `${i * 100}%`;
+}
 
-img.setAttributeNode(src);
-imgContainer.appendChild(img);
-
-let i = 0;
-
-const imgSlide = (direction) => {
-  if (direction === "prev") {
-    i--;
-    if (i < 0) {
-      i = imgs.length - 1;
-    }
-  } else if (direction === "next") {
-    i++;
-    if (i >= imgs.length) {
-      i = 0;
-    }
+const makeClone = () => {
+  for (let i = 0; i < slideCount; i++) {
+    slides[i].style.left = `${i * 100}%`;
+    const cloneSlide = slides[i].cloneNode(true);
+    cloneSlide.classList.add("clone");
+    sliderContainer.appendChild(cloneSlide);
   }
-
-  src.value = `./img/s_img/${imgs[i]}`;
+  for (let i = slideCount - 1; i >= 0; i--) {
+    slides[i].style.left = `${i * 100}%`;
+    const cloneSlide = slides[i].cloneNode(true);
+    cloneSlide.classList.add("clone");
+    sliderContainer.prepend(cloneSlide);
+  }
 };
 
-arrows.forEach((arrow) => {
-  arrow.addEventListener("click", (e) => {
-    const direction = e.target.id === "left" ? "prev" : "next";
-    imgSlide(direction);
-  });
+makeClone();
+
+// slide width
+
+let currentIndex = 0;
+
+const gotoSlide = (i) => {
+  sliderContainer.style.left = `${i * -100}%`;
+  sliderContainerMo.style.left = `${i * -100}%`;
+  sliderContainer.classList.add("animated");
+  sliderContainerMo.classList.add("animated");
+  currentIndex = i;
+};
+
+gotoSlide(0);
+
+// auto slide function
+
+const startAutoSlide = () => {
+  timer = setInterval(() => {
+    const nextIdx = (currentIndex + 1) % slideCount;
+    gotoSlide(nextIdx);
+  }, 3000);
+};
+
+startAutoSlide();
+
+sliderWrapper.addEventListener("mouseenter", () => {
+  clearInterval(timer);
 });
 
-const autoSlide = () => {
-  setInterval(() => {
-    imgSlide("next");
-  }, 5000);
-};
-
-autoSlide();
+sliderWrapper.addEventListener("mouseleave", () => {
+  startAutoSlide();
+});
 
 // selecto menu click event
-// const leftImgs = document.querySelectorAll(".left_img > img");
 const buttons = document.querySelectorAll(".buttons > button");
 console.log(buttons);
 

@@ -22,12 +22,26 @@
   max-height: 100vh;
   overflow: hidden;
 }
+.slide_pc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide_pc.animated {
+  transition: left 0.3s ease-in;
+}
 .main_img_pc {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
   object-fit: cover;
 }
-.main_img_mo {
+.slide_mo {
   display: none;
 }
 .arrows {
@@ -157,7 +171,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: widthflow 1s ease-in;
+  animation: widthflow 0.8s ease-in;
 }
 @keyframes widthflow {
   0% {
@@ -171,9 +185,6 @@
   }
   75% {
     width: 50%;
-  }
-  90% {
-    width: 90%;
   }
   100% {
     width: 100%;
@@ -794,10 +805,28 @@ button.active {
 }
 
 @media screen and (max-width: 500px) {
-  .main_img_pc {
+  body.modal-open {
+    overflow: hidden;
+  }
+  .slide_pc {
     display: none;
   }
+  .slide_mo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slide_mo.animated {
+    transition: left 0.3s ease-in;
+  }
   .main_img_mo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
     display: block;
     width: 100%;
     height: 100%;
