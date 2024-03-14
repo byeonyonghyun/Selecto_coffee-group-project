@@ -1,11 +1,29 @@
 @media (max-width:500px) {
-    .whats_new_head > span {
+    .inner > span {
         font-size: 40px;
     }
 }
 
 @media (max-width:700px) {
-    .whats_new_head > span {
+    .inner > span {
         font-size: 50px;
+    }
+}
+@media (max-width: 1024px) {
+    .whats-new-head > span {
+      font-size: 65px;
+      text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .whats-new__wrap > .inner {
+      padding-top: 140px;
+    }
+}
+
+@media (max-width: 500px) {
+    .whats-new-head > span {
+      font-size: 40px;
     }
 }
