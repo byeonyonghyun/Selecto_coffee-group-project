@@ -1,19 +1,15 @@
 import stores from "./stores.js";
 
 const form = document.querySelector("form");
-const services = document.querySelectorAll("input[type='checkbox']");
 const locates = document.querySelectorAll(".locate_name");
 
 const city = document.querySelector("#city")
 const state = document.querySelector("#state");
-const name = document.querySelector("#store_name");
 
 const pages = document.querySelectorAll(".page_number a");
 
 
-
-
-//스크롤시 fade-in클래스가 포함된 section에 active클래스를 추가
+//active 추가 이벤트
 const activeEvent = (e) => {
   const active = document.querySelector(".active");
   e.preventDefault();
@@ -21,6 +17,29 @@ const activeEvent = (e) => {
   e.target.classList.add("active");
 };
 
+const searchResult = (e) => {
+  e.preventDefault();
+  const name = document.querySelector("#store_name").value;
+  const selectedCity = city.value;
+  const selectedState = state.value;
+  const services = document.querySelectorAll("input[type='checkbox']");
+
+  let checkedSrv = [];
+  services.forEach((service) => {
+    service.addEventListener("change", function () {
+      const srvId = service.id;
+    })
+  })
+  console.log(checkedSrv)
+  // console.log(service)
+  // const filtered = stores.data.filter((store) => {
+  //   const nameMatch = store.name.includes(name);
+  //   const cityMatch = (selectedCity === 'all' || store.locate === selectedCity);
+  //   const stateMatch = (selectedState === 'all' || store.adrress.includes(selectedState));
+  // });
+
+
+}
 
 //table 리스트 전체 제거
 const removeItems = () => {
@@ -28,51 +47,6 @@ const removeItems = () => {
   items.forEach((item) => {
     item.remove();
   });
-};
-
-//table리스트 생성
-const createItem = function (store) {
-  const tbody = document.querySelector("tbody");
-  const tr = document.createElement("tr");
-
-  for (let i = 0; i < 5; i++) {
-    const td = document.createElement("td");
-
-    switch (i) {
-      case 0:
-        td.innerText = `${store.name}`
-        break;
-      case 1:
-        td.innerText = `${store.locate}`
-        break;
-      case 2:
-        td.innerText = `${store.adrress}`
-        break;
-      case 3:
-        td.innerText = `${store.tel}`
-        break;
-      case 4:
-        for (let i = 0; i < store.srv.length; i++) {
-          const img = document.createElement("img");
-          const attr = document.createAttribute("src");
-          attr.value = store.srv[i];
-          img.setAttributeNode(attr);
-          td.append(img);
-        }
-        break;
-    }
-
-    tr.append(td);
-  }
-  // tr.innerHTML = `
-  // <td>${store.name}</td>
-  // <td>${store.locate}</td>
-  // <td>${store.adrress}</td>
-  // <td>${store.tel}</td>
-  // <td>${store.srv}</td>
-  // `
-
-  tbody.appendChild(tr);
 };
 
 //select태그에서 option요소를 선택했을 때, 값에 따라 연결되어 있는 select태그의 option값 
@@ -309,40 +283,43 @@ locates.forEach((locate) => {
   });
 });
 
-const searchResult = (e) => {
-  e.preventDefault();
-  city.value
-  state.value
-  name.value
-  services.forEach((service) => {
-    service.addEventListener("change", function (e) {
-      return e.target.id;
-    })
-  })
-  const filtered = stores.data.filter((store) => {
-    return store.locate === locateId;
-  });
+//table리스트 생성
+const createItem = function (store) {
+  const tbody = document.querySelector("tbody");
+  const tr = document.createElement("tr");
 
-  removeItems();
+  for (let i = 0; i < 5; i++) {
+    const td = document.createElement("td");
 
-  if (filtered.length === 0) {
-    const tbody = document.querySelector("tbody");
-    const tr = document.createElement("tr");
-    for (let i = 0; i < 5; i++) {
-      const td = document.createElement("td");
-      if (i === 2) {
-        td.innerText = "등록된 매장이 없습니다!"
-      }
-      tr.append(td);
+    switch (i) {
+      case 0:
+        td.innerText = `${store.name}`
+        break;
+      case 1:
+        td.innerText = `${store.locate}`
+        break;
+      case 2:
+        td.innerText = `${store.adrress}`
+        break;
+      case 3:
+        td.innerText = `${store.tel}`
+        break;
+      case 4:
+        for (let i = 0; i < store.srv.length; i++) {
+          const img = document.createElement("img");
+          const attr = document.createAttribute("src");
+          attr.value = store.srv[i];
+          img.setAttributeNode(attr);
+          td.append(img);
+        }
+        break;
     }
-    tbody.append(tr);
-  } else {
-    filtered.forEach((store) => {
-      createItem(store);
-    });
+    tr.append(td);
   }
-}
+  tbody.appendChild(tr);
+};
 
+//store정보 가져오기
 const importData = () => {
   stores.data.map((store) => {
     if (!document.getElementById(store.name)) {
@@ -351,9 +328,16 @@ const importData = () => {
   });
 };
 
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", importData);
-form.addEventListener("submit", searchResult);
 city.addEventListener("change", selectCity);
+form.addEventListener("submit", searchResult);
+
 pages.forEach((page) => {
   page.addEventListener("click", activeEvent)
 });
