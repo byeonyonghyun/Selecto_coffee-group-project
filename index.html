@@ -14,50 +14,62 @@
     <div id="wrap">
       <article id="main_page">
         <div class="scroll_img">
-          <section class="slide_pc">
-            <img
-              class="main_img_pc"
-              src="./img/s_img/main-desk-1.jpg"
-              alt="main01"
-            />
-            <img
-              class="main_img_pc"
-              src="./img/s_img/main-desk-2.jpg"
-              alt="main02"
-            />
-            <img
-              class="main_img_pc"
-              src="./img/s_img/main-desk-3.jpg"
-              alt="main03"
-            />
-            <img
-              class="main_img_pc"
-              src="./img/s_img/main-desk-4.jpg"
-              alt="main04"
-            />
-          </section>
-          <section class="slide_mo">
-            <img
-              class="main_img_mo"
-              src="./img/s_img/small-main-1.jpg"
-              alt="main-m01"
-            />
-            <img
-              class="main_img_mo"
-              src="./img/s_img/small-main-2.jpg"
-              alt="main-m02"
-            />
-            <img
-              class="main_img_mo"
-              src="./img/s_img/small-main-3.jpg"
-              alt="main-m03"
-            />
-            <img
-              class="main_img_mo"
-              src="./img/s_img/small-main-4.jpg"
-              alt="main-m04"
-            />
-          </section>
+          <ul class="slide_pc">
+            <li class="main_img_pc">
+              <img src="./img/s_img/main-desk-1.jpg" alt="main01" />
+            </li>
+            <li class="main_img_pc">
+              <img src="./img/s_img/main-desk-2.jpg" alt="main02" />
+            </li>
+            <li class="main_img_pc">
+              <img src="./img/s_img/main-desk-3.jpg" alt="main03" />
+            </li>
+            <li class="main_img_pc">
+              <img src="./img/s_img/main-desk-4.jpg" alt="main04" />
+            </li>
+          </ul>
+          <ul class="slide_mo">
+            <li class="main_img_mo">
+              <img src="./img/s_img/small-main-1.jpg" alt="main-m01" />
+              <div class="m_slide-num">
+                <span>
+                  <p>01</p>
+                  /
+                  <p>04</p>
+                </span>
+              </div>
+            </li>
+            <li class="main_img_mo">
+              <img src="./img/s_img/small-main-2.jpg" alt="main-m02" />
+              <div class="m_slide-num">
+                <span>
+                  <p>02</p>
+                  /
+                  <p>04</p>
+                </span>
+              </div>
+            </li>
+            <li class="main_img_mo">
+              <img src="./img/s_img/small-main-3.jpg" alt="main-m03" />
+              <div class="m_slide-num">
+                <span>
+                  <p>03</p>
+                  /
+                  <p>04</p>
+                </span>
+              </div>
+            </li>
+            <li class="main_img_mo">
+              <img src="./img/s_img/small-main-4.jpg" alt="main-m04" />
+              <div class="m_slide-num">
+                <span>
+                  <p>04</p>
+                  /
+                  <p>04</p>
+                </span>
+              </div>
+            </li>
+          </ul>
           <div class="arrows">
             <span id="left" class="arrow"></span>
             <span id="right" class="arrow"></span>
@@ -65,7 +77,11 @@
         </div>
         <div class="popup_all">
           <section class="popup pop01">
-            <a class="pop_img pop_link01" href="#">
+            <a
+              class="pop_img pop_link01"
+              href="https://www.youtube.com/watch?v=r6bibJ3wZQI"
+              target="_blank"
+            >
               <img src="./img/s_img/pop-main1.png" alt="popup01" />
             </a>
             <div class="pop_close popclose01">
@@ -74,7 +90,11 @@
             </div>
           </section>
           <section class="popup pop02">
-            <a class="pop_img pop_link02" href="#">
+            <a
+              class="pop_img pop_link02"
+              href="https://www.youtube.com/watch?v=gGHKuVlTO3M"
+              target="_blank"
+            >
               <img src="./img/s_img/pop-main2.png" alt="popup02" />
             </a>
             <div class="pop_close popclose02">
@@ -85,31 +105,45 @@
         </div>
         <div class="mobile_popup">
           <div class="m_inner_popup">
-            <section></section>
-            <div class="m_pop_contents">
-              <button class="m_popup_close"></button>
-              <a href="#">
-                <img src="./img/s_img/m-popup01.png" alt="m-pop01" />
-              </a>
-              <span>
-                <p>1</p>
-                /
-                <p>2</p>
-              </span>
-            </div>
+            <article>
+              <section class="m_popup_container">
+                <div class="m_pop_contents">
+                  <button class="m_popup_close"></button>
+                  <a
+                    href="https://www.youtube.com/watch?v=r6bibJ3wZQI"
+                    target="_blank"
+                  >
+                    <img src="./img/s_img/m-popup01.png" alt="m-pop01" />
+                  </a>
+                  <span>
+                    <p>1</p>
+                    /
+                    <p>2</p>
+                  </span>
+                </div>
+                <div class="m_pop_contents">
+                  <button class="m_popup_close"></button>
+                  <a
+                    href="https://www.youtube.com/watch?v=gGHKuVlTO3M"
+                    target="_blank"
+                  >
+                    <img src="./img/s_img/m-popup02.png" alt="m-pop01" />
+                  </a>
+                  <span>
+                    <p>2</p>
+                    /
+                    <p>2</p>
+                  </span>
+                </div>
+              </section>
+            </article>
             <div class="m_pop_close">
               <p>오늘 하루 창 열지 않기</p>
               <p>닫기</p>
             </div>
           </div>
         </div>
-        <div class="m_slide-num">
-          <span>
-            <p>01</p>
-            /
-            <p>04</p>
-          </span>
-        </div>
+
         <div class="mouse_icon">
           <div></div>
         </div>

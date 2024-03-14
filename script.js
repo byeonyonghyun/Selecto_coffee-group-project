@@ -13,94 +13,182 @@ popClose02.addEventListener("click", () => {
 
 // m-popup close
 const body = document.querySelector("body");
-const popupBtn = document.querySelector(".m_popup_close");
-const mPopup = document.querySelectorAll(".mobile_popup");
+const popupBtnsMo = document.querySelectorAll(".m_popup_close");
+const popupClosesMo = document.querySelectorAll(".m_pop_close > p");
+const mPopup = document.querySelector(".mobile_popup");
 
 body.classList.add("modal-open");
 
-popupBtn.addEventListener("click", () => {
-  popupBtn.parentNode.parentNode.parentNode.remove();
-  body.classList.remove("modal-open");
+popupBtnsMo.forEach((popupBtn) => {
+  popupBtn.addEventListener("click", () => {
+    mPopup.remove();
+    body.classList.remove("modal-open");
+  });
 });
 
-// popup link
-const popLink01 = document.querySelector(".pop_link01");
-const popLink02 = document.querySelector(".pop_link02");
+popupClosesMo.forEach((popupClose) => {
+  popupClose.addEventListener("click", () => {
+    mPopup.remove();
+    body.classList.remove("modal-open");
+  });
+});
 
-popLink01.addEventListener("click", () => {
-  window.open("https://www.youtube.com/watch?v=r6bibJ3wZQI");
-});
-popLink02.addEventListener("click", () => {
-  window.open("https://www.youtube.com/watch?v=gGHKuVlTO3M");
-});
+// mobile popup slide
+const popupSlideContainer = document.querySelector(".m_inner_popup > article");
+const popupWraps = document.querySelector(".m_popup_container");
+const popupSlides = document.querySelectorAll(".m_pop_contents");
+const popupSlideWidth = 100;
+const popupSlideCount = popupSlides.length;
+console.log(popupSlideCount);
+
+// // li style setting
+const popupUpdateWidth = () => {
+  const popupSlides = document.querySelectorAll(".m_pop_contents");
+  console.log(popupSlides);
+  const newSlideCountPop = popupSlides.length;
+  const newWidthPop = `${popupSlideWidth * newSlideCountPop}%`;
+  popupSlideContainer.style.width = newWidthPop;
+  popupWraps.style.width = newWidthPop;
+};
+
+// mobile popup clone
+const makePopupClone = () => {
+  for (let i = 0; i < popupSlideCount; i++) {
+    popupSlides[i].style.left = `${i * 100}%`;
+    const cloneSlidePop = popupSlides[i].cloneNode(true);
+    cloneSlidePop.classList.add("clone");
+    popupWraps.appendChild(cloneSlidePop);
+  }
+
+  popupUpdateWidth();
+  setTimeout(() => {
+    popupWraps.classList.add("animated");
+  }, 100);
+};
+
+makePopupClone();
+
+let popupIdx = 0;
+
+const popupMove = (num) => {
+  // console.log(num);
+  console.log("slide");
+  popupWraps.style.left = `${-num * popupSlideWidth}%`;
+  popupIdx = num;
+  // console.log(num);
+  if (popupIdx === popupSlideCount || popupIdx === -popupSlideCount) {
+    setTimeout(() => {
+      popupWraps.classList.remove("animated");
+      popupWraps.style.left = "0px";
+      popupIdx = 0;
+    }, 500);
+    setTimeout(() => {
+      popupWraps.classList.add("animated");
+    }, 600);
+  }
+};
+
+// auto slide
+const popupAutoSlide = () => {
+  timer = setInterval(() => {
+    popupMove(popupIdx + 1);
+  }, 3000);
+};
+
+popupAutoSlide();
+
+const popupStopSlide = () => {
+  clearInterval(timer);
+};
 
 // image slide
 const sliderWrapper = document.querySelector(".scroll_img");
-const sliderContainer = document.querySelector(".slide_pc");
+const sliderContainer = document.querySelector(".slide_pc ");
+const slides = document.querySelectorAll(".main_img_pc");
 const sliderContainerMo = document.querySelector(".slide_mo");
-const slides = document.querySelectorAll(".slide_pc > img");
-const slidesMo = document.querySelectorAll(".slide_mo > img");
-console.log(slides);
+const slidesMo = document.querySelectorAll(".main_img_mo");
 
+// arrows
 const navPrev = document.querySelector("#left");
 const navNext = document.querySelector("#right");
 
+const slideWidth = 100;
 const slideCount = slides.length;
-// slide count
-for (let i = 0; i < slideCount; i++) {
-  slides[i].style.left = `${i * 100}%`;
-  slidesMo[i].style.left = `${i * 100}%`;
-}
 
+let currentIdx = 0;
+
+// li style setting
+const updateWidth = () => {
+  const currentSlides = document.querySelectorAll(".main_img_pc");
+  const currentSlidesMo = document.querySelectorAll(".main_img_mo");
+  const newSlideCount = currentSlides.length;
+  const newSlideCountMo = currentSlidesMo.length;
+  const newWidth = `${slideWidth * newSlideCount}%`;
+  const newWidthMo = `${slideWidth * newSlideCountMo}%`;
+  sliderContainer.style.width = newWidth;
+  sliderContainerMo.style.width = newWidthMo;
+};
+
+// slide clone
 const makeClone = () => {
   for (let i = 0; i < slideCount; i++) {
     slides[i].style.left = `${i * 100}%`;
+    slidesMo[i].style.left = `${i * 100}%`;
     const cloneSlide = slides[i].cloneNode(true);
+    const cloneSlideMo = slidesMo[i].cloneNode(true);
     cloneSlide.classList.add("clone");
+    cloneSlideMo.classList.add("clone");
     sliderContainer.appendChild(cloneSlide);
+    sliderContainerMo.appendChild(cloneSlideMo);
   }
-  for (let i = slideCount - 1; i >= 0; i--) {
-    slides[i].style.left = `${i * 100}%`;
-    const cloneSlide = slides[i].cloneNode(true);
-    cloneSlide.classList.add("clone");
-    sliderContainer.prepend(cloneSlide);
-  }
+
+  updateWidth();
+  setTimeout(() => {
+    sliderContainer.classList.add("animated");
+    sliderContainerMo.classList.add("animated");
+  }, 100);
 };
 
 makeClone();
 
-// slide width
-
-let currentIndex = 0;
-
-const gotoSlide = (i) => {
-  sliderContainer.style.left = `${i * -100}%`;
-  sliderContainerMo.style.left = `${i * -100}%`;
-  sliderContainer.classList.add("animated");
-  sliderContainerMo.classList.add("animated");
-  currentIndex = i;
+const moveSlide = (num) => {
+  sliderContainer.style.left = `${-num * slideWidth}%`;
+  sliderContainerMo.style.left = `${-num * slideWidth}%`;
+  currentIdx = num;
+  if (currentIdx === slideCount || currentIdx === -slideCount) {
+    setTimeout(() => {
+      sliderContainer.classList.remove("animated");
+      sliderContainer.style.left = "0px";
+      sliderContainerMo.classList.remove("animated");
+      sliderContainerMo.style.left = "0px";
+      currentIdx = 0;
+    }, 500);
+    setTimeout(() => {
+      sliderContainer.classList.add("animated");
+      sliderContainerMo.classList.add("animated");
+    }, 600);
+  }
 };
 
-gotoSlide(0);
-
-// auto slide function
-
-const startAutoSlide = () => {
+// auto slide
+const autoSlide = () => {
   timer = setInterval(() => {
-    const nextIdx = (currentIndex + 1) % slideCount;
-    gotoSlide(nextIdx);
+    moveSlide(currentIdx + 1);
+    // popupMove(currentIdx + 1);
   }, 3000);
 };
 
-startAutoSlide();
+autoSlide();
 
-sliderWrapper.addEventListener("mouseenter", () => {
+const stopSlide = () => {
   clearInterval(timer);
-});
+};
 
-sliderWrapper.addEventListener("mouseleave", () => {
-  startAutoSlide();
-});
+sliderContainer.addEventListener("mouseenter", stopSlide);
+sliderContainerMo.addEventListener("mouseenter", stopSlide);
+
+sliderContainer.addEventListener("mouseleave", autoSlide);
+sliderContainerMo.addEventListener("mouseleave", autoSlide);
 
 // selecto menu click event
 const buttons = document.querySelectorAll(".buttons > button");
@@ -141,11 +229,11 @@ const snsLink03 = document.querySelector(".sns_link03");
 console.log(snsLink01);
 
 snsLink01.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C4IFmbERfkt/");
+  window.open("https://www.instagram.com/p/C4ZWXpqxt7m/");
 });
 snsLink02.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C362kX6RN41/");
+  window.open("https://www.instagram.com/p/C4IFmbERfkt/");
 });
 snsLink03.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C3mogD6xyqc/");
+  window.open("https://www.instagram.com/p/C362kX6RN41/");
 });
