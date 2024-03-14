@@ -5,6 +5,8 @@ const popUpWrapPrivacyUseInfoHidden = document.querySelector(
 );
 const footerPopupCloseBtn = document.querySelector(".footer_popup_close_btn");
 
+const totopBtn = document.querySelector(".totop_btn");
+
 privacyPopUpButton.onclick = () => {
   popUpWrapPrivacyUseInfoHidden.classList.add("flex");
   footerPopUp.classList.add("block");
@@ -12,4 +14,9 @@ privacyPopUpButton.onclick = () => {
 footerPopupCloseBtn.onclick = () => {
   popUpWrapPrivacyUseInfoHidden.classList.remove("flex");
   footerPopUp.classList.remove("block");
+};
+
+//페이지 위로 스크롤되는 버튼
+totopBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };

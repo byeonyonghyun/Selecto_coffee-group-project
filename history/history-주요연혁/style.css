@@ -18,10 +18,10 @@
 
 .history_head > span {
   font-size: 65px;
-  font-family: #FF4713;
+  font-family: #ff4713;
   font-weight: bold;
   line-height: 100px;
-  color:#FF4713;
+  color: #ff4713;
 }
 
 .history_head > div {
@@ -36,10 +36,10 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 1;
-  color: #FF4713;
+  color: #ff4713;
   z-index: 9;
   padding-top: 5px;
-  border-top: 1px solid #FF4713;
+  border-top: 1px solid #ff4713;
 }
 
 .history_head > div > a:first-child {
@@ -166,15 +166,15 @@
 .history_work_mobile {
   font-size: 250px;
   font-weight: 500;
-  color: #FF4713;
+  color: #ff4713;
   display: none;
 }
 
-.for-apear-in-mobile {
+.for_apear_in_mobile {
   display: none;
 }
 
-.history_work-unfixed {
+.history_work_unfixed {
   position: absolute;
   top: 0;
   left: 50%;
@@ -187,11 +187,11 @@
   line-height: 0.7;
 }
 
-.history_work-unfixed-2021 {
+.history_work_unfixed_2021 {
   opacity: 1;
   line-height: 0.7;
 }
-.history_work-unfixed-2012 {
+.history_work_unfixed_2012 {
   opacity: 1;
   padding-top: 65px;
   line-height: 0.7;
@@ -223,7 +223,7 @@
 }
 
 @media (max-width: 1430px) {
-  .history_work-unfixed {
+  .history_work_unfixed {
     font-size: 210px;
     padding-right: 600px;
   }
@@ -250,7 +250,7 @@
 }
 
 @media (max-width: 1150px) {
-  .history_work-unfixed {
+  .history_work-_nfixed {
     font-size: 160px;
     padding-right: 490px;
   }
@@ -275,7 +275,7 @@
 }
 
 @media (max-width: 900px) {
-  .brand_history_inner{
+  .brand_history_inner {
     padding-top: 180px;
     padding-bottom: 100px;
   }
@@ -290,11 +290,11 @@
     display: none;
   }
 
-  .history_work-unfixed {
+  .history_work_unfixed {
     opacity: 1;
   }
 
-  .history_work-unfixed {
+  .history_work_unfixed {
     position: unset;
     transform: translate(0);
     font-size: 100px;
@@ -346,11 +346,11 @@
     margin-right: 30px;
   }
 
-  .history_work-unfixed-2021 {
+  .history_work_unfixed_2021 {
     opacity: 1;
     line-height: unset;
   }
-  .history_work-unfixed-2012 {
+  .history_work_unfixed_2012 {
     opacity: 1;
     padding-top: 65px;
     line-height: unset;
@@ -372,7 +372,7 @@
 }
 
 @media (max-width: 900px) {
-  .brand_history_inner{
+  .brand_history_inner {
     padding-bottom: 80px;
   }
 
@@ -407,7 +407,7 @@
     margin-right: 20px;
   }
 
-  .history_work-unfixed {
+  .history_work_unfixed {
     font-size: 75px;
     margin-left: 30px;
     margin-bottom: 30px;

@@ -5,16 +5,14 @@ const headerHidden = document.querySelector(".header_hidden");
 const menuBurgers = document.querySelector(".menu_burgers");
 const mobileBox = document.querySelector(".mobile_box");
 const mobileCloseBtn = document.querySelector(".mobile_closeBtn");
-const menuArrows = document.querySelectorAll(".menu_arrow");
-const mobileMenuList = document.querySelectorAll(".mobile_menu_list");
-const mobileMenus = document.querySelectorAll(".mobile_menu");
+const mobileMenuTitles = document.querySelectorAll(".mobile_menu_title");
 
 // ******** header
 menuList.onmouseover = () => {
   headerHidden.classList.add("focus");
 };
 
-menuList.onmouseleave = () => {
+headerHidden.onmouseleave = () => {
   headerHidden.classList.remove("focus");
 };
 // ******** mobile_box
@@ -25,8 +23,10 @@ mobileCloseBtn.onclick = () => {
   mobileBox.classList.remove("right");
 };
 
-mobileMenus.forEach((mobileMenu) => {
-  mobileMenu.addEventListener("click", (e) => {
-    e.currentTarget.classList.toggle("active");
+mobileMenuTitles.forEach((mobileMenuTitle) => {
+  mobileMenuTitle.addEventListener("click", function () {
+    const mobileMenuList =
+      this.parentElement.querySelector(".mobile_menu_list");
+    mobileMenuList.classList.toggle("active");
   });
 });
