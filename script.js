@@ -35,9 +35,9 @@ popupClosesMo.forEach((popupClose) => {
 
 // mobile popup slide
 const popupSlideContainer = document.querySelector(".m_inner_popup > article");
-const popupWraps = document.querySelector(".m_popup_container");
+const popupWrap = document.querySelector(".m_popup_container");
 const popupSlides = document.querySelectorAll(".m_pop_contents");
-const popupSlideWidth = 100;
+const popupSlideWidth = 500;
 const popupSlideCount = popupSlides.length;
 console.log(popupSlideCount);
 
@@ -46,23 +46,23 @@ const popupUpdateWidth = () => {
   const popupSlides = document.querySelectorAll(".m_pop_contents");
   console.log(popupSlides);
   const newSlideCountPop = popupSlides.length;
-  const newWidthPop = `${popupSlideWidth * newSlideCountPop}%`;
-  popupSlideContainer.style.width = newWidthPop;
-  popupWraps.style.width = newWidthPop;
+  const newWidthPop = `${popupSlideWidth * newSlideCountPop}px`;
+  // popupSlideContainer.style.width = newWidthPop;
+  popupWrap.style.width = newWidthPop;
 };
 
 // mobile popup clone
 const makePopupClone = () => {
   for (let i = 0; i < popupSlideCount; i++) {
-    popupSlides[i].style.left = `${i * 100}%`;
+    // popupSlides[i].style.left = `${i * 500}px`;
     const cloneSlidePop = popupSlides[i].cloneNode(true);
     cloneSlidePop.classList.add("clone");
-    popupWraps.appendChild(cloneSlidePop);
+    popupWrap.appendChild(cloneSlidePop);
   }
 
   popupUpdateWidth();
   setTimeout(() => {
-    popupWraps.classList.add("animated");
+    popupWrap.classList.add("animated");
   }, 100);
 };
 
@@ -72,19 +72,19 @@ let popupIdx = 0;
 
 const popupMove = (num) => {
   // console.log(num);
-  console.log("slide");
-  popupWraps.style.left = `${-num * popupSlideWidth}%`;
+  // console.log("slide");
+  popupWrap.style.left = `${-num * popupSlideWidth}px`;
   popupIdx = num;
   // console.log(num);
-  if (popupIdx === popupSlideCount || popupIdx === -popupSlideCount) {
+  if (popupIdx === popupSlideCount) {
     setTimeout(() => {
-      popupWraps.classList.remove("animated");
-      popupWraps.style.left = "0px";
+      popupWrap.classList.remove("animated");
+      popupWrap.style.left = "0px";
       popupIdx = 0;
-    }, 500);
+    }, 2000);
     setTimeout(() => {
-      popupWraps.classList.add("animated");
-    }, 600);
+      popupWrap.classList.add("animated");
+    }, 2100);
   }
 };
 
@@ -107,10 +107,6 @@ const sliderContainer = document.querySelector(".slide_pc ");
 const slides = document.querySelectorAll(".main_img_pc");
 const sliderContainerMo = document.querySelector(".slide_mo");
 const slidesMo = document.querySelectorAll(".main_img_mo");
-
-// arrows
-const navPrev = document.querySelector("#left");
-const navNext = document.querySelector("#right");
 
 const slideWidth = 100;
 const slideCount = slides.length;
@@ -222,6 +218,27 @@ buttons.forEach((button) => {
   });
 });
 
+// news link
+const newsLink01 = document.querySelector(".news_link01");
+const newsLink02 = document.querySelector(".news_link02");
+const newsLink03 = document.querySelector(".news_link03");
+
+newsLink01.addEventListener("click", () => {
+  window.open(
+    "https://www.selecto.co.kr/brand/whatsnew_detail.asp?boardIdx=454&slideInx=0"
+  );
+});
+newsLink02.addEventListener("click", () => {
+  window.open(
+    "https://www.selecto.co.kr/brand/whatsnew_detail.asp?boardIdx=447&slideInx=1"
+  );
+});
+newsLink03.addEventListener("click", () => {
+  window.open(
+    "https://www.selecto.co.kr/brand/whatsnew_detail.asp?boardIdx=438&slideInx=2"
+  );
+});
+
 // sns link
 const snsLink01 = document.querySelector(".sns_link01");
 const snsLink02 = document.querySelector(".sns_link02");
@@ -229,11 +246,11 @@ const snsLink03 = document.querySelector(".sns_link03");
 console.log(snsLink01);
 
 snsLink01.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C4ZWXpqxt7m/");
+  window.open("https://www.instagram.com/p/C4fO8-txG7O/");
 });
 snsLink02.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C4IFmbERfkt/");
+  window.open("https://www.instagram.com/p/C4ZWXpqxt7m/");
 });
 snsLink03.addEventListener("click", () => {
-  window.open("https://www.instagram.com/p/C362kX6RN41/");
+  window.open("https://www.instagram.com/p/C4IFmbERfkt/");
 });
