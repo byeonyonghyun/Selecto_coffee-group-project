@@ -5,8 +5,27 @@ const locates = document.querySelectorAll(".locate_name");
 
 const city = document.querySelector("#city")
 const state = document.querySelector("#state");
+let checkedSrv = [];
+const services = document.querySelectorAll("input[type='checkbox']");
+
+services.forEach((service) => {
+  service.addEventListener("change", function (e) {
+    const srvId = e.target.id;
+    if (e.target.checked) {
+      if (!checkedSrv.includes(srvId)) {
+        checkedSrv.push(srvId);
+      }
+    } else {
+      checkedSrv = checkedSrv.filter(id => id !== srvId);
+    }
+    console.log(checkedSrv);
+    filterStoresByServices();
+  });
+});
 
 const pages = document.querySelectorAll(".page_number a");
+
+
 
 
 //active 추가 이벤트
@@ -17,28 +36,52 @@ const activeEvent = (e) => {
   e.target.classList.add("active");
 };
 
+
+const filterStoresByServices = () => {
+  if (checkedSrv.length === 0) {
+    return stores.data;
+  }
+  const filteredStores = stores.data.filter(store => {
+    return checkedSrv.every(srvId =>
+      store.srv.includes(`./img/${srvId}.svg`));
+  });
+  return filteredStores;
+}
+
+
+
+
+//검색결과 출력
 const searchResult = (e) => {
   e.preventDefault();
   const name = document.querySelector("#store_name").value;
   const selectedCity = city.value;
   const selectedState = state.value;
-  const services = document.querySelectorAll("input[type='checkbox']");
 
-  let checkedSrv = [];
-  services.forEach((service) => {
-    service.addEventListener("change", function () {
-      const srvId = service.id;
-    })
+
+
+  const filtered = stores.data.filter((store) => {
+    return (name && store.name.includes(name)) || (store.locate === selectedCity && store.address.includes(selectedState))
   })
-  console.log(checkedSrv)
-  // console.log(service)
-  // const filtered = stores.data.filter((store) => {
-  //   const nameMatch = store.name.includes(name);
-  //   const cityMatch = (selectedCity === 'all' || store.locate === selectedCity);
-  //   const stateMatch = (selectedState === 'all' || store.adrress.includes(selectedState));
-  // });
 
+  removeItems();
 
+  if (filtered.length === 0) {
+    const tbody = document.querySelector("tbody");
+    const tr = document.createElement("tr");
+    for (let i = 0; i < 5; i++) {
+      const td = document.createElement("td");
+      if (i === 2) {
+        td.innerText = "등록된 매장이 없습니다!"
+      }
+      tr.append(td);
+    }
+    tbody.append(tr);
+  } else {
+    filtered.forEach((store) => {
+      createItem(store);
+    });
+  }
 }
 
 //table 리스트 전체 제거
@@ -132,8 +175,8 @@ const selectCity = () => {
         `
   } else if (selectedCity === "대구") {
     state.innerHTML = `
-        < option value = "구/군 선택" > 구 / 군 선택</ >
-          <option value="달성군">달성군</option>
+    <option value = "구/군 선택" > 구/군 선택</option>
+    <option value="달성군">달성군</option>
   `
   } else if (selectedCity === "대전") {
     state.innerHTML = `
@@ -193,6 +236,7 @@ const selectCity = () => {
     <option value="남동구">남동구</option>
     <option value="동구">동구</option>
     <option value="부평구">부평구</option>
+    <option value="서구">서구</option>
     <option value="연수구">연수구</option>
     <option value="옹진구">옹진구</option>
     <option value="중구">중구</option>
@@ -299,7 +343,7 @@ const createItem = function (store) {
         td.innerText = `${store.locate}`
         break;
       case 2:
-        td.innerText = `${store.adrress}`
+        td.innerText = `${store.address}`
         break;
       case 3:
         td.innerText = `${store.tel}`
@@ -329,15 +373,9 @@ const importData = () => {
 };
 
 
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", importData);
 city.addEventListener("change", selectCity);
 form.addEventListener("submit", searchResult);
-
 pages.forEach((page) => {
   page.addEventListener("click", activeEvent)
 });
