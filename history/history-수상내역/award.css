@@ -1,0 +1,408 @@
+/*수상내역*/
+.brand_history_inner {
+  padding-top: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history_head {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.history_head > span {
+  font-size: 65px;
+  font-weight: bold;
+  line-height: 100px;
+  color: #ff4713;
+  white-space: nowrap;
+}
+
+.history_head > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+
+.history_head > div > a {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff4713;
+  z-index: 9;
+  padding-top: 5px;
+  border-top: 1px solid #ff4713;
+}
+
+.history_head > div > a:first-child {
+  margin-right: 45px;
+}
+.history_head > div > a:last-child {
+  opacity: 0.5;
+}
+
+.award_main_list {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.list_award_box:nth-child(2) {
+  margin: 0 30px;
+}
+
+.list_award_box {
+  width: 340px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dfdfe0;
+}
+
+.list_award_box > img {
+  width: 164px;
+  margin-bottom: 40px;
+}
+
+.award_main_list > .list-award_box:last-child img {
+  width: auto !important;
+  height: 164px;
+}
+
+.list_award_box > span {
+  text-align: center;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #ff4713;
+}
+
+.award_sub_list_award {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 1080px;
+  border-top: 1px solid #dfdfe0;
+  padding: 40px 0;
+}
+
+.award_sub_list_award:last-child {
+  border-bottom: 1px solid #dfdfe0;
+}
+
+.award_sub_list_award > .list_award_sidetab {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  background: #ff4713;
+  color: white;
+  font-size: 16px;
+  line-height: 27px;
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+}
+.award_sub_list_award > img {
+  width: 128px;
+  margin-right: 32px;
+}
+
+.award_sub_list_award > .imgtag > img {
+  width: 128px;
+}
+
+.award_sub_list_award > .imgtag {
+  width: 128px;
+  margin-right: 32px;
+}
+
+.award_sub_list_award > .list_award_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.award_sub_list_award > .list_award_info > span:first-child {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #ff4713;
+  word-break: keep-all;
+}
+
+.award_sub_list_award > .list_award_info > span:nth-child(2) {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  opacity: 0.5;
+  color: #ff4713;
+}
+
+.award_sub_list_award > .list_award_info > span:last-child {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #ff4713;
+}
+
+.brand_history_wrap {
+  padding-bottom: 200px;
+}
+
+.brand_store_pagelist {
+  width: 160px;
+  margin: 60px auto;
+  display: flex;
+  gap: 2px;
+}
+.brand_store_pagelist li {
+  width: 100%;
+  height: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+}
+.brand_store_pagelist li a {
+  color: #ff4713;
+}
+
+.brand_store_pagelist li:first-child {
+  background: #ff4713;
+}
+.brand_store_pagelist li:first-child a {
+  color: #ffffff;
+}
+/*미디어 쿼리*/
+
+@media (max-width: 1200px) {
+  .history_head > span {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1120px) {
+  .list_award_box {
+    width: 280px;
+  }
+
+  .award_sub_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .award_sub_list_award {
+    width: 90%;
+  }
+
+  .list_award_box > img {
+    width: 140px;
+    margin-bottom: 40px;
+  }
+
+  .award_main_list > .list_award_box:last-child img {
+    height: 140px;
+  }
+  .list_award_box {
+    width: 260px;
+    height: 330px;
+  }
+  .list_award_box > span {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .award_sub_list_award > .list_award_info > span:first-child {
+    font-size: 21px;
+    margin-bottom: 2px;
+  }
+  .award_sub_list_award > .list_award_info > span:nth-child(2) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .award_sub_list_award > .list_award_info > span:last-child {
+    font-size: 17px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .history_head > div {
+    margin-bottom: 60px;
+  }
+
+  .award_main_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list_award_box {
+    width: 190px;
+    height: 260px;
+  }
+
+  .award_sub_list_award > img {
+    width: 100px;
+  }
+  .award_sub_list_award > .imgtag > img {
+    width: 100px;
+  }
+
+  .award_sub_list_award > .imgtag {
+    width: 100px;
+  }
+
+  .list_award_box > span {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .list_award_box > img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .award_main_list > .list_award_box:last-child img {
+    height: 120px;
+  }
+
+  .award_sub_list_award > .list_award_info > span:first-child {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 760px) {
+  .history_head > span {
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 700px) {
+  .award_main_list > .list_award_box:last-child img {
+    height: 100px;
+  }
+  .list_award_box > img {
+    width: 100px;
+  }
+
+  .award_sub_list_award > img {
+    width: 80px;
+  }
+
+  .award_sub_list_award > .imgtag > img {
+    width: 80px;
+  }
+
+  .award_sub_list_award > .imgtag {
+    width: 80px;
+  }
+
+  .list_award_box:nth-child(2) {
+    margin: 0px 10px;
+  }
+
+  .list_award_box {
+    width: 180px;
+    height: 240px;
+  }
+
+  .award_sub_list_award > .list_award_sidetab {
+    width: 75px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand_history_inner {
+    padding-top: 140px;
+  }
+
+  .history_head > span {
+    font-size: 40px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .history_head > div > a {
+    font-size: 16px;
+  }
+  .history_head > div > a:first-child {
+    margin-right: 20px;
+  }
+
+  .award_main_list {
+    flex-direction: column;
+  }
+  .award_main_list {
+    margin-bottom: 40px;
+  }
+
+  .list_award_box:nth-child(2) {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .list_award_box {
+    flex-direction: unset;
+    width: 90%;
+    height: 130px;
+    margin-bottom: 15px;
+  }
+
+  .list_award_box > img {
+    width: 100px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .list_award_box > span {
+    line-height: unset;
+    width: 158px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .award_sub_list_award > .list_award_info > span:first-child {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  .award_sub_list_award > .list_award_info > span:nth-child(2) {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .award_sub_list_award > .list_award_info > span:last-child {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .award_sub_list_award {
+    padding: 30px 0;
+  }
+
+  .award_sub_list_award > .list_award_sidetab {
+    width: 50px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+
+  .brand_history_wrap {
+    padding-bottom: 80px;
+  }
+}
