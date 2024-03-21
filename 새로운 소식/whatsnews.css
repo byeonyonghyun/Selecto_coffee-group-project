@@ -223,6 +223,9 @@ ul {
       font-size: 65px;
       text-align: center;
     }
+    .new_head {
+      margin-left: 40px;
+    }
   
     .whats_new {
       font-size: 19px;
@@ -278,7 +281,9 @@ ul {
     .whats_new_wrap > .inner {
       padding-top: 140px;
     }
-  
+    .new_head {
+      margin-left: 40px;
+    }
     .whats_new_head > span {
       font-size: 50px;
     }
@@ -365,7 +370,10 @@ ul {
     .whats_new_head > span {
       font-size: 40px;
     }
-  
+
+    .new_head {
+      margin-left: 40px;
+    }
     .pagination {
       margin-bottom: 90px;
     }
