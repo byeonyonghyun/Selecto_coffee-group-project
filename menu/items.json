@@ -1,0 +1,83 @@
+[
+  {
+    "id": 0,
+    "menuidx": 145,
+    "index": 0,
+    "category": "Signature",
+    "type": "NEW",
+    "img": "./menu/s_img/01signature/si-01.png",
+    "title": "딸기 라떼"
+  },
+  {
+    "id": 1,
+    "menuidx": 144,
+    "index": 0,
+    "category": "Signature",
+    "type": "NEW",
+    "img": "./menu/s_img/01signature/si-02.png",
+    "title": "딸기 밀크티"
+  },
+  {
+    "id": 2,
+    "menuidx": 143,
+    "index": 0,
+    "category": "Signature",
+    "type": "NEW",
+    "img": "./menu/s_img/01signature/si-03.png",
+    "title": "생딸기 요거트 스무디"
+  },
+  {
+    "id": 3,
+    "menuidx": 142,
+    "index": 0,
+    "category": "Signature",
+    "type": "NEW",
+    "img": "./menu/s_img/01signature/si-04.png",
+    "title": "생딸기 주스"
+  },
+  {
+    "id": 4,
+    "menuidx": 133,
+    "index": 1,
+    "category": "Coffee",
+    "type": "none",
+    "img": "./menu/s_img/02coffee/co-01.jpg",
+    "title": "씨리얼 아메리카노"
+  },
+  {
+    "id": 5,
+    "menuidx": 35,
+    "index": 2,
+    "category": "Cookies",
+    "type": "none",
+    "img": "./menu/s_img/03cookie/ki-01.png",
+    "title": "크렌베리 화이트 초코 쿠키"
+  },
+  {
+    "id": 6,
+    "menuidx": 138,
+    "index": 3,
+    "category": "Beverage",
+    "type": "none",
+    "img": "./menu/s_img/04beverage/be-01.png",
+    "title": "고구마라떼"
+  },
+  {
+    "id": 7,
+    "menuidx": 138,
+    "index": 4,
+    "category": "Deli&Dessert",
+    "type": "none",
+    "img": "./menu/s_img/05dessert/de-01.png",
+    "title": "햄치즈 갈릭 브레드"
+  },
+  {
+    "id": 8,
+    "menuidx": 84,
+    "index": 5,
+    "category": "MD",
+    "type": "none",
+    "img": "./menu/s_img/06md/md-01.png",
+    "title": "베이직 콜드컵"
+  }
+]
