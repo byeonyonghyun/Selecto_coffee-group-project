@@ -1,3 +1,4 @@
+@import url(./reset.css);
 /*주요연혁*/
 
 .brand_history_inner {
@@ -21,6 +22,9 @@
   line-height: 100px;
   color: #ff4713;
   white-space: nowrap;
+}
+.fixed {
+  position: fixed;
 }
 
 .history_head > div {
@@ -136,9 +140,8 @@
   opacity: 0;
 }
 
-.fixframe.fixed {
-  position: fixed;
-  top: 50%;
+.opacity1 {
+  opacity: 1;
 }
 
 .year_box {
@@ -174,15 +177,30 @@
   transform: translate(-50%, 0);
   font-size: 250px;
   font-weight: 500;
-  color: #ff4713;
+  color: #fff;
   padding-right: 800px;
   line-height: 0.7;
+  /* background: #f00; */
+  border: 1px solid #f00;
 }
 
-.history_work_unfixed_2021 {
+.history_work_unfixed_2022 {
+  z-index: 100;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   opacity: 1;
   line-height: 0.7;
+  color: #f00;
+  width: 50px;
+  height: 100px;
+  /* border: 1px solid #f00; */
 }
+/* .opacity0 {
+  opacity: 0;
+} */
+
 .history_work_unfixed_2012 {
   opacity: 1;
   padding-top: 65px;

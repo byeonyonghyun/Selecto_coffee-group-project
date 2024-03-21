@@ -1,0 +1,134 @@
+@import url(./reset.css);
+
+/*주요연혁*/
+
+.brand_history_inner {
+  padding-top: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history_head {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.history_head > span {
+  font-size: 65px;
+  font-weight: bold;
+  line-height: 100px;
+  color: #ff4713;
+  white-space: nowrap;
+}
+
+.history_head > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+
+.history_head > div > a {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff4713;
+  z-index: 9;
+  padding-top: 5px;
+  border-top: 1px solid #ff4713;
+}
+
+.history_head > div > a:first-child {
+  margin-right: 45px;
+}
+.history_head > div > a:last-child {
+  opacity: 0.5;
+}
+
+.history_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.history_year {
+  width: 45%;
+  font-size: 264px;
+  font-weight: 500;
+  color: #ff4713;
+  text-align: right;
+  margin-right: 100px;
+  opacity: 0;
+}
+.history_year_unfixed {
+  width: 45%;
+  font-size: 264px;
+  font-weight: 500;
+  color: #ff4713;
+  text-align: right;
+  margin-right: 100px;
+}
+
+.sticky {
+  position: sticky;
+  top: 53%;
+  left: -0.6%;
+}
+.history_year_unfixed_2023 {
+  width: 45%;
+  font-size: 264px;
+  font-weight: 500;
+  color: #ff4713;
+  text-align: right;
+  margin-right: 100px;
+  position: relative;
+}
+
+.work {
+  width: 55%;
+  margin: 40px 0;
+}
+
+.work_list {
+  display: flex;
+  margin-bottom: 50px;
+}
+.work_list_month {
+  font-size: 30px;
+  font-weight: 500;
+  margin-right: 100px;
+  color: #ff4713;
+  white-space: nowrap;
+  line-height: 36px;
+}
+.work_list_text {
+  display: block;
+  font-size: 21px;
+  line-height: 36px;
+  color: #ff4713;
+  word-break: keep-all;
+}
+.bottom_border {
+  width: 800px;
+  position: absolute;
+  left: 48%;
+  bottom: 0;
+  height: 1px;
+  background: #dfdfe0;
+  z-index: 0;
+}
+.bottom_border_scroll {
+  width: 800px;
+  position: absolute;
+  left: 48%;
+  bottom: 0;
+  height: 1px;
+  background: #dfdfe0;
+  z-index: 0;
+  opacity: 0;
+}
