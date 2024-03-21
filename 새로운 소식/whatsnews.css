@@ -1,5 +1,31 @@
-@import url(./reset.css);
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap')
+
+
+/* @font-face {
+	font-family: "notosans";
+	src: url(./font/Noto\ Sans\ KR);
+} */
+/* reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+    color: #ff4713;
+}
+body {
+	font-family: "notosans";
+	color: #ff4713;
+	letter-spacing: -2px;
+    background-color: #f7f6f3
+}
 
 .container {
     position: relative;
@@ -21,7 +47,7 @@
     width: 80%;
     font-weight: bold;
     font-size: 65px;
-    
+    margin-left: 40px;
 }
 .whats_new_list {
     display: flex;
@@ -41,13 +67,14 @@
     border-top: 1px solid;
 }
 .ing_wrap {
-    width: 1250px;
+    width: 1300px;
 }
 .new_head {
     font-size: 23px;
     font-weight: bold;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-left: 80px;
+    display: inline-block;
 }
 
 /* 새로운 소식 사진 */
@@ -183,7 +210,6 @@ ul {
       display: flex;
       flex-direction: column;
     }
-  
     .ing_wrap {
       width: 80%;
     }
@@ -343,5 +369,8 @@ ul {
     .pagination {
       margin-bottom: 90px;
     }
+    .whats_new_w {
+  font-size: 16px;
+}
   }
   
