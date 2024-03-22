@@ -4,26 +4,21 @@
 	position: relative;
 	overflow: hidden;
 }
+.container_inner {
+	padding-bottom: 330px;
+}
+.move-in {
+	animation: move 2s both;
+}
 
 .brand_story_wrap {
 	width: 100%;
 	height: 100vh;
 	display: flex;
-}
-.brand_story_wrap {
 	opacity: 0;
-	animation: opacity 2s;
-	animation-fill-mode: both;
-}
-@keyframes opacity {
-	100% {
-		opacity: 1;
-	}
+	animation: move 2s both;
 }
 @keyframes move {
-	0% {
-		transform: translateX(10%);
-	}
 	100% {
 		opacity: 1;
 		transform: translateX(0);
@@ -32,7 +27,6 @@
 .brand_story_left {
 	width: 50%;
 	height: 100%;
-	opacity: 1;
 }
 .brand_story_right {
 	width: 50%;
@@ -46,6 +40,7 @@
 	background-size: cover;
 }
 .brand_slogan_wrap {
+	opacity: 0;
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -78,29 +73,23 @@
 	opacity: 0;
 }
 .brand_story_wrap .brand_story_title {
-	animation: move 2s;
-	animation-fill-mode: both;
+	animation: move 2s both;
 }
 .brand_story_wrap .brand_story_subtitle {
-	animation: move 2s 0.5s;
-	animation-fill-mode: both;
+	animation: move 2s 0.5s both;
 }
 .brand_story_wrap .brand_story_txtwrap {
-	animation: opacity 2s 1s;
-	animation-fill-mode: both;
+	animation: move 2s 1s both;
 }
-/* .brand_story_title.move-in {
-	animation: move 2s;
-	animation-fill-mode: both;
+.brand_slogan_wrap .brand_story_title {
+	animation-delay: 0.5s;
 }
-.brand_story_subtitle.move-in {
-	animation: move 2s 0.5s;
-	animation-fill-mode: both;
+.brand_slogan_wrap .brand_story_subtitle {
+	animation-delay: 1s;
 }
-.brand_story_txtwrap.move-in {
-	animation: opacity 2s 1s;
-	animation-fill-mode: both;
-} */
+.brand_slogan_wrap .brand_story_txtwrap {
+	animation-delay: 1.5s;
+}
 .brand_story_txtwrap p {
 	font-size: 18px;
 	font-weight: 400;
@@ -118,13 +107,6 @@
 	margin-top: 230px;
 	display: flex;
 	align-items: center;
-}
-.fade-in {
-	opacity: 0;
-	transition: all 0.5s;
-}
-.fade-in.move-in {
-	opacity: 1;
 }
 
 @media (max-width: 1760px) {
