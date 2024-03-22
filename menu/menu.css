@@ -59,9 +59,9 @@
 
 /* menu-contents */
 .menu_contents {
+  max-width: 1200px;
   width: 100%;
   height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   /* margin-top: 60px; */
 }
@@ -166,6 +166,9 @@
 
 @media screen and (max-width: 1550px) {
   .menu_title {
+    width: 80%;
+  }
+  .menu_contents {
     width: 80%;
   }
 }

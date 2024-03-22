@@ -8,7 +8,7 @@
     <!-- custom css & js -->
     <link rel="stylesheet" href="./menu.css" />
     <script type="module" defer src="./menu.js"></script>
-    <title>SELECTO COFFEE--</title>
+    <title>SELECTO COFFEE</title>
   </head>
   <body>
     <main id="container">
@@ -17,14 +17,14 @@
           <h1>MENU</h1>
           <div id="menu_category">
             <ul class="menu_select">
-              <li class="active">Signature</li>
-              <li>Coffee</li>
-              <li>Cookies</li>
+              <li class="active" data-index="0">Signature</li>
+              <li data-index="1">Coffee</li>
+              <li data-index="2">Cookies</li>
             </ul>
             <ul class="menu_select">
-              <li>Beverage</li>
-              <li>Deli&Dessert</li>
-              <li>MD</li>
+              <li data-index="3">Beverage</li>
+              <li data-index="4">Deli&Dessert</li>
+              <li data-index="5">MD</li>
             </ul>
           </div>
         </section>
@@ -45,9 +45,9 @@
               <li class="menu_click active">
                 <a>1</a>
               </li>
-              <li class="menu_click">
+              <!-- <li class="menu_click">
                 <a>2</a>
-              </li>
+              </li> -->
             </ul>
           </article>
         </section>
