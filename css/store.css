@@ -1,0 +1,513 @@
+@import url(./reset.css);
+
+#wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* title */
+#title {
+	padding-top: 180px;
+	width: 100%;
+	color: #ff4713;
+}
+.title_inner {
+	width: 80%;
+	margin: 0 auto;
+}
+.title_inner h1 {
+	font-size: 65px;
+	line-height: 100px;
+	font-weight: bold;
+}
+.title_inner > div {
+	display: flex;
+	justify-content: center;
+	margin: 60px 0;
+}
+.title_inner h4 {
+	border-top: 0.5px solid #ff4713;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.5;
+	opacity: 0.5;
+}
+#store_wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* 매장 찾기 */
+
+.store_search {
+	margin: 0 auto;
+	border-top: 1px solid #dfdfe0;
+	border-bottom: 1px solid #dfdfe0;
+}
+.store_search_inner {
+	width: 100%;
+}
+.store_search_left {
+	float: left;
+	background: url(../img/store/c-location-map.png) center/cover no-repeat;
+}
+.store_search_left .locate_name_area {
+	margin: 0 auto;
+	width: 300px;
+	height: 100%;
+	position: relative;
+	transition: all 0.3s;
+}
+.store_search_left span {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background-color: #fff;
+	border-radius: 100%;
+	font-size: 9px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+	cursor: pointer;
+	position: absolute;
+}
+.store_search_left span.active {
+	background-color: #ff4713;
+	color: #fff;
+}
+.incheon {
+	top: 59px;
+	left: 40px;
+}
+.seoul {
+	top: 75px;
+	left: 85px;
+}
+.gyeonggi-do {
+	top: 116px;
+	left: 112px;
+}
+.Sejong {
+	top: 160px;
+	left: 120px;
+}
+.Chungnam {
+	top: 170px;
+	left: 75px;
+}
+.Chungbuk {
+	top: 144px;
+	left: 164px;
+}
+.Daejeon {
+	top: 206px;
+	left: 134px;
+}
+.jeonbuk {
+	top: 238px;
+	left: 91px;
+}
+.Jeonnam {
+	top: 306px;
+	left: 60px;
+}
+.Gangwon-do {
+	top: 70px;
+	left: 182px;
+}
+.Gyeongbuk {
+	top: 174px;
+	left: 220px;
+}
+.daegu {
+	top: 226px;
+	left: 197px;
+}
+.Gyeongnam {
+	top: 264px;
+	left: 167px;
+}
+.Ulsan {
+	top: 246px;
+	left: 248px;
+}
+.busan {
+	top: 293px;
+	left: 222px;
+}
+.gwangju {
+	top: 298px;
+	left: 116px;
+}
+.Jeju {
+	top: 384px;
+	left: 30px;
+}
+.store_search_right {
+	float: right;
+	padding: 50px 8%;
+}
+.store_search_right_inner {
+	height: 100%;
+}
+.store_search_right_inner h3 {
+	font-size: 16px;
+	font-weight: 600;
+}
+.store_search_right_inner span {
+	font-weight: 500;
+}
+.store_search_locate {
+	width: 100%;
+}
+.store_search_locate p {
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.store_search_locate_city {
+	width: 360px;
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 22px;
+}
+.store_search_locate_city > div {
+	width: 290px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.store_search_locate_city select {
+	width: 140px;
+	height: 100%;
+	border: 1px solid #dfdfe0;
+	border-radius: 5px;
+	background: none;
+	font-size: 14px;
+	font-weight: normal;
+	color: #ff4713;
+	padding: 10px;
+	cursor: pointer;
+}
+.store_search_locate_city select:focus {
+	outline: none;
+}
+.store_search_locate_name {
+	width: 360px;
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+.store_search_locate_name > form {
+	width: 290px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.store_search_locate_name #store_name {
+	width: 242px;
+	height: 100%;
+	border: 1px solid #dfdfe0;
+	border-radius: 5px;
+	background: none;
+	padding: 0 10px;
+}
+.store_search_locate_name #store_name:focus {
+	outline: none;
+}
+.store_search_locate_name #store_submit {
+	width: 38px;
+	height: 38px;
+	border: none;
+	border-radius: 5px;
+	background: #ff4713 url(../img/store/c-search-ic.svg) center no-repeat;
+	cursor: pointer;
+}
+
+/* 매장 서비스 별 검색 */
+.store_search_service {
+	height: 100%;
+	margin-top: 60px;
+}
+.store_search_service_inner {
+	margin-top: 22px;
+}
+.store_search_service_inner > div {
+	width: 360px;
+	height: 18px;
+	margin-bottom: 18px;
+}
+.store_search_service_inner span {
+	width: 50%;
+	height: 18px;
+	float: left;
+}
+.store_search_service_inner input[type="checkbox"] {
+	display: none;
+}
+.store_search_service_inner input[type="checkbox"] + label {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #dfdfe0;
+	border-radius: 2px;
+	position: relative;
+	cursor: pointer;
+}
+.store_search_service_inner input[type="checkbox"]:checked + label::after {
+	content: "";
+	width: 17px;
+	height: 17px;
+	text-align: center;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	background: #ff4713 url(../img/store/c-check-ic.svg) center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.store_search_service_inner label {
+	display: inline-block;
+	height: 18px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.store_search_service_inner img {
+	width: 18px;
+	height: 18px;
+}
+
+/* 매장안내 */
+
+.store_info h2 {
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 41px;
+}
+.store_info table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	font-size: 14px;
+	font-weight: 500;
+}
+.store_info thead {
+	width: 100%;
+	height: 60px;
+	border: 1px solid #ff4713;
+	border-left: none;
+	border-right: none;
+}
+.store_info tbody tr {
+	width: 100%;
+	height: 80px;
+	border-bottom: 0.5px solid rgba(255, 71, 19, 0.2);
+}
+.store_nm {
+	width: 20%;
+}
+.store_loc {
+	width: 5%;
+}
+.store_adr {
+	width: 45%;
+}
+.store_tel {
+	width: 15%;
+}
+.store_srv {
+	width: 15%;
+}
+
+/* page number */
+.page_number {
+	display: none;
+	/* display: flex */
+	justify-content: center;
+	margin-bottom: 196px;
+}
+.page_number a {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #ff4713;
+}
+.page_number a.active {
+	content: "";
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #fff;
+	background: #ff4713;
+	border-radius: 100%;
+}
+.page_number span {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 12px;
+	color: #ff4713;
+	cursor: pointer;
+}
+@media screen and (min-width: 1221px) {
+	.store_search {
+		min-width: 1200px;
+	}
+	.store_search_left {
+		width: 600px;
+		height: 450px;
+	}
+	.store_search_right {
+		width: 600px;
+		height: 450px;
+	}
+	.store_info {
+		min-width: 1200px;
+		margin: 120px auto 60px;
+	}
+}
+@media screen and (max-width: 1220px) {
+	.title_inner h1 {
+		font-size: 65px;
+	}
+	#store_wrap {
+		padding: 0 5%;
+	}
+	.store_search {
+		width: 100%;
+	}
+	.store_search_left {
+		width: 50%;
+		height: 450px;
+	}
+	.store_search_right {
+		width: 50%;
+		height: 450px;
+	}
+	.store_info {
+		width: 100%;
+		margin: 120px auto 60px;
+	}
+	.store_adr,
+	td:nth-child(3) {
+		width: 45%;
+		padding: 0 8%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.title_inner h1 {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 1024px) {
+	tbody td:nth-child(5) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.store_search {
+		width: 100%;
+		height: auto;
+		border: none !important;
+	}
+	.store_search_inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.store_search_left {
+		width: 600px;
+		float: none !important;
+		border-top: 1px solid #dfdfe0;
+	}
+	.store_search_right {
+		width: 600px;
+		float: none !important;
+		border-bottom: 1px solid #dfdfe0;
+	}
+}
+@media screen and (max-width: 770px) {
+	.store_info table td {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.store_search_left {
+		width: 100%;
+	}
+	.store_search_right {
+		width: 100%;
+	}
+	.store_info {
+		padding: 0 5% 30px;
+		margin: 41px;
+	}
+	.store_table {
+		overflow-x: auto;
+	}
+	.store_table::-webkit-scrollbar {
+		height: 5px;
+	}
+	.store_table::-webkit-scrollbar-thumb {
+		background-color: #ff4713;
+		border-radius: 5px;
+	}
+	.store_table::-webkit-scrollbar-track {
+		background: #f9d3c6;
+		border-radius: 5px;
+	}
+	.store_info table {
+		min-width: 650px;
+	}
+	thead,
+	tbody {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.title_inner .h1 {
+		font-size: 38px;
+	}
+	.store_search_inner {
+		padding: 0 5%;
+	}
+	.store_search_left {
+		height: 400px;
+	}
+	.store_search_left .locate_name_area {
+		transform: translateY(-5%);
+		scale: 89%;
+	}
+	.store_search_right {
+		height: 100%;
+	}
+}
