@@ -1,0 +1,417 @@
+/* header*/
+
+.header {
+	display: flex;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	padding: 0 80px;
+	background: #fff;
+	font-weight: 600;
+	z-index: 99999;
+	position: fixed;
+	transition: all 0.3s;
+}
+.header-hide {
+	top: -100px;
+}
+.header_inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.logo {
+	width: 122px;
+}
+.logo img {
+	width: 122px;
+}
+.menu {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-60%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 880px;
+}
+.menu_list {
+	width: 140px;
+	height: 50px;
+	margin: 0 40px;
+}
+.menu_list a {
+	color: #ff4713;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 50px;
+}
+.menu:hover ~ .pc_link > #pcLinkButton {
+	background: #fff;
+	color: #ff4713;
+	border: 1px solid #ff4713;
+}
+.pc_link {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 50px;
+}
+.pc_link button {
+	font-size: 16px;
+	font-family: "notosnas";
+	font-weight: 500;
+	padding: 10px 24px;
+	margin-right: 40px;
+	border: none;
+	border-radius: 20px;
+	background: #ff4713;
+	color: #fff;
+	transition: all 0.5;
+	cursor: pointer;
+}
+.pc_link a {
+	margin-left: 6px;
+}
+.menu_burgers {
+	display: none;
+}
+
+/*header hidden*/
+.header_hidden {
+	background: #fff;
+	width: 100%;
+	height: 380px;
+	transition: all 0.7s;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: -400px;
+	z-index: 1;
+}
+.focus {
+	top: 100px;
+}
+
+.header_hidden_inner {
+	display: flex;
+	justify-content: center;
+	width: 880px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-60%);
+}
+.menu_hidden {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.menu_hidden ul {
+	width: 140px;
+	margin: 0 40px;
+	line-height: 50px;
+}
+
+.hidden_list_link {
+	color: #ff4713;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+/*mobile box*/
+.mobile_box {
+	position: fixed;
+	top: 0;
+	right: -340px;
+	width: 340px;
+	height: 100%;
+	z-index: 9999999999;
+	background: #fff;
+	transition: all 0.3s;
+}
+.right {
+	right: 0;
+}
+.mobile_closeBtn img {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	cursor: pointer;
+}
+
+.mobile_menus {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	margin-top: 70px;
+	padding-bottom: 100px;
+}
+
+.menus {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	letter-spacing: -1px;
+}
+
+.mobile_menu {
+	width: 100%;
+	align-items: center;
+}
+.mobile_menu_title {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ff4713;
+	margin-bottom: 20px;
+}
+
+.menu_arrow {
+	background-image: url(https://www.selecto.co.kr/assets/images/icon/arrow-down.png);
+	background-size: cover;
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+}
+.menu_arrow.rotate {
+	transform: rotate(180deg);
+}
+
+.mobile_menu_list {
+	display: none;
+	flex-direction: column;
+	margin-top: 35px;
+	margin-bottom: 50px;
+}
+.down {
+	display: flex;
+}
+
+.mobile_menu_list a {
+	font-size: 12px;
+	padding: 5px;
+	margin-bottom: 7px;
+	color: #ff4713;
+}
+
+.mobile_link {
+	width: 77%;
+	margin-top: 20px;
+}
+.mobile_link a:nth-child(2) {
+	margin: 0 7px;
+}
+.mobile_link button {
+	border-radius: 20px;
+	background: #ff4713;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	padding: 10px 20px;
+	margin-top: 40px;
+	margin-right: 135px;
+	margin-bottom: 60px;
+	border: none;
+	cursor: pointer;
+}
+.mobile_menu_open {
+	right: 0;
+	z-index: 999999;
+	position: fixed;
+	top: 0;
+	right: -321px;
+	width: 320px;
+	height: 120vh;
+	transition: 0.3s ease;
+}
+.mobile_menu_open_contents {
+	position: absolute;
+	right: 0;
+	width: 320px;
+	height: 100%;
+	z-index: 999999;
+	background: #fff;
+}
+.mobile_closeBtn {
+	background-image: url(../images/icon/X@2x.png);
+	background-size: cover;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.menus_box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	margin-top: 70px;
+	padding-bottom: 100px;
+}
+.menus {
+	width: 77%;
+}
+.category_for_active:first-child {
+	margin-top: 0;
+}
+.category_for_active {
+	margin-top: 20px;
+}
+.category_title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menus_menu {
+	font-size: 20px;
+	font-weight: 500;
+	color: #ff4713;
+}
+
+.menus_arrow {
+	background-image: url(../images/icon/arrow-up.png);
+	background-size: cover;
+	width: 18px;
+	height: 18px;
+}
+.category_list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.category_list a {
+	font-size: 12px;
+	padding: 5px;
+	margin-bottom: 7px;
+	color: #ff4713;
+}
+
+/*미디어 쿼리*/
+
+@media screen and (max-width: 1650px) {
+	.menu {
+		width: 760px;
+	}
+	.header_hidden_inner {
+		width: 760px;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.header {
+		padding: 0 40px;
+	}
+	.menu {
+		width: 568px;
+	}
+	.menu_list {
+		margin: 0 10px;
+		width: 122px;
+	}
+	.menu_list a {
+		font-size: 16px;
+	}
+	.pc_link button {
+		font-size: 15px;
+		font-weight: 500;
+		padding: 7px 16px;
+		margin-right: 10px;
+	}
+	.header_hidden_inner {
+		width: 568px;
+	}
+	.header_hidden_inner a {
+		font-size: 15px;
+	}
+	.menu_hidden ul {
+		width: 122px;
+		margin: 0 10px;
+	}
+}
+@media screen and (max-width: 1050px) {
+	.header {
+		height: 80px;
+	}
+
+	.logo > a > img {
+		width: 100px;
+		height: 35px;
+	}
+
+	.menu {
+		display: none;
+	}
+	.header_hidden {
+		display: none;
+	}
+	.pc_link {
+		display: none;
+	}
+	.menu_burgers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 99999;
+	}
+	.burger {
+		height: 22px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 9999999999;
+	}
+	.b_bar {
+		width: 30px;
+		height: 3px;
+		background: #ff4713;
+	}
+}
+@media (max-width: 540px) {
+	.header {
+		height: 55px;
+		padding: 0 16px;
+		margin-right: 7px;
+	}
+
+	.logo {
+		width: 81px;
+		height: 100%;
+	}
+	.logo a {
+		width: 100%;
+		height: 100%;
+	}
+	.logo a img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.burger {
+		height: 20px;
+	}
+	.b_bar {
+		width: 22px;
+		height: 3px;
+	}
+}
