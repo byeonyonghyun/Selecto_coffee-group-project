@@ -89,7 +89,7 @@
 	transition: all 0.7s;
 	display: flex;
 	justify-content: center;
-	position: absolute;
+	position: fixed;
 	top: -400px;
 	z-index: 1;
 }
