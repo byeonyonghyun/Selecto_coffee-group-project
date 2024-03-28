@@ -363,20 +363,6 @@
     "service": ["/img/store/wifi.svg", "/img/store/park.svg"]
   },
   {
-    "main_area": "인천",
-    "sub_area": "서구",
-    "store": "청라국제도시점",
-    "address": "인천 서구 청라한내로 110 (청라동) 1층",
-    "tel": "070-8657-3336",
-    "service": [
-      "/img/store/wifi.svg",
-      "/img/store/park.svg",
-      "/img/store/smoke.svg",
-      "/img/store/parasol.svg",
-      "fas fa-mobile-button"
-    ]
-  },
-  {
     "main_area": "울산",
     "sub_area": "남구",
     "store": "울산수암점",
