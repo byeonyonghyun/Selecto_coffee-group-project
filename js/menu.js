@@ -52,7 +52,7 @@ menuBtns.forEach((menuBtn) => {
     removeItems();
 
     // json
-    fetch("items.json")
+    fetch("/json/items.json")
       .then((response) => response.json())
       .then((data) => {
         data.forEach((items) => {
@@ -64,7 +64,7 @@ menuBtns.forEach((menuBtn) => {
 
 // 시그니처 아이템 생성
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("items.json")
+  fetch("/json/items.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((items) => {
