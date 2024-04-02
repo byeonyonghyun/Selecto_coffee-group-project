@@ -359,6 +359,9 @@
 	}
 }
 @media screen and (max-width: 1050px) {
+	#cursor{
+		display: none;
+	}
 	.header {
 		height: 80px;
 	}

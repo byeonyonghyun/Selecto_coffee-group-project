@@ -3,8 +3,8 @@ window.addEventListener("scroll", (e) => {
   const fadeIns = document.querySelectorAll('.fade-in');
   for (let i = 0; i < fadeIns.length; i++) {
     const fadeIn = fadeIns[i];
-    const imgMove = fadeIn.getBoundingClientRect().bottom;
-    if (imgMove <= window.innerHeight) {
+    const imgMove = fadeIn.getBoundingClientRect().top;
+    if (imgMove < window.innerHeight) {
       fadeIn.classList.add('move-in');
     }
   }

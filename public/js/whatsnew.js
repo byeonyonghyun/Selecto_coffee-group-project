@@ -1,4 +1,4 @@
-const as = document.querySelectorAll("a");
+const as = document.querySelectorAll(".whats_new");
 
 as.forEach((a, i)=> {
   a.addEventListener("click", (e) => {

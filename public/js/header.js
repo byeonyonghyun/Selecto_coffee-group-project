@@ -8,6 +8,40 @@ const mobileBox = document.querySelector(".mobile_box");
 const mobileCloseBtn = document.querySelector(".mobile_closeBtn");
 const mobileMenuTitles = document.querySelectorAll(".mobile_menu_title");
 
+// cursor move
+const cursor = document.querySelector("#cursor");
+
+// cursor pageX, Y
+let x = 0;
+let y = 0;
+
+// cursor original & speed
+let targetX = 0;
+let targetY = 0;
+let speed = 0.1;
+
+window.addEventListener("mousemove", (e) => {
+  x = e.pageX;
+  y = e.pageY;
+});
+
+const loop = () => {
+  targetX += (x - targetX) * speed;
+  targetY += (y - targetY) * speed;
+  cursor.style.top = targetY + "px";
+  cursor.style.left = targetX + "px";
+  window.requestAnimationFrame(loop);
+};
+loop();
+
+const showCursorRotate = () => {
+  cursor.classList.add("active");
+};
+const hideCursorRotate = () => {
+  cursor.classList.remove("active");
+};
+
+
 
 // ******** header
 menuList.addEventListener("mouseenter", () => {

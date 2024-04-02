@@ -18,7 +18,7 @@ let y = 0;
 // cursor original & speed
 let targetX = 0;
 let targetY = 0;
-let speed = 0.1;
+
 
 window.addEventListener("mousemove", (e) => {
   x = e.pageX;
@@ -26,8 +26,8 @@ window.addEventListener("mousemove", (e) => {
 });
 
 const loop = () => {
-  targetX += (x - targetX) * speed;
-  targetY += (y - targetY) * speed;
+  targetX += (x - targetX) + 10
+  targetY += (y - targetY) + 10
   cursor.style.top = targetY + "px";
   cursor.style.left = targetX + "px";
   window.requestAnimationFrame(loop);
@@ -77,9 +77,10 @@ window.addEventListener("scroll", function () {
   if (currentScroll > lastScrollTop) {
     // 아래로 스크롤
     header.style.top = "-100px"; // 헤더 숨기기
+    headerHidden.classList.remove("focus");
   } else {
     // 위로 스크롤
-    header.style.top = "0"; // 헤더 보이기
+    header.style.top = "0"; // 헤더 보이기 
   }
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 음수가 되지 않도록 설정
 }, false);
